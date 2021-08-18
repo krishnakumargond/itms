@@ -14,7 +14,7 @@ export class ZoneListComponent implements OnInit {
   }
 
   addZoneForm(){
-    this.router.navigateByUrl('/login/header/zone-form')
+    this.router.navigateByUrl('/login/header/add-update-zone')
   }
 
 }

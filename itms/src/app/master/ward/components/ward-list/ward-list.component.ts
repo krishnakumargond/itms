@@ -22,7 +22,7 @@ export class WardListComponent implements OnInit {
 				.appendTo( '#example2_wrapper .col-md-6:eq(0)' );
   }
   addWardForm(){
-    this.router.navigateByUrl('/login/header/ward-form')
+    this.router.navigateByUrl('/login/header/add-update-ward')
   }
 
 }
