@@ -1,20 +1,19 @@
 import { Component, OnInit,ViewChild,AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
-import * as $ from "jquery";
 @Component({
   selector: 'app-ward-list',
   templateUrl: './ward-list.component.html',
   styleUrls: ['./ward-list.component.css']
 })
-export class WardListComponent implements OnInit {
+export class WardListComponent implements OnInit, AfterViewInit {
 
   constructor(private router:Router) { }
-  @ViewChild('example2') table;
+  @ViewChild('example5') table;
   dataTable: any;
   dtOptions: any;
-  ngOnInit(): void {
-   			
+  ngOnInit(): void {    
   }
+
   ngAfterViewInit(){   
     this.dtOptions = {
       dom: 'Bfrtip',
@@ -28,7 +27,8 @@ export class WardListComponent implements OnInit {
     this.dataTable = $(this.table.nativeElement);
     this.dataTable.DataTable(this.dtOptions);    
   }
-  addWardForm(){
+
+  addUpdate(){    
     this.router.navigateByUrl('/login/header/add-update-ward')
   }
 
