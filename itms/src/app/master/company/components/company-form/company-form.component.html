@@ -1,65 +1,222 @@
 <div class="page-wrapper">
     <div class="page-content">
-<h6 class="mb-0 text-uppercase">Form with icons</h6>
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+            <div class="breadcrumb-title pe-3">Master</div>
+            <div class="ps-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0 p-0">
+                        <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Customer </li>
+                    </ol>
+                </nav>
+            </div>           
+        </div>
 <hr>
 <div class="card border-top border-0 border-4 border-danger">
     <div class="card-body p-5">
         <div class="card-title d-flex align-items-center">
-            <div><i class="bx bxs-user me-1 font-22 text-danger"></i>
+            <div><i class="bx bx-home me-1 font-22 text-danger"></i>
             </div>
-            <h5 class="mb-0 text-danger">User Registration</h5>
+            <h5 class="mb-0 text-danger">Customer Registration</h5>
+            <div class="ms-auto">
+                <div class="col-12">
+               
+              
+            <button type="button" class="btn btn-primary px-2"><i class="bx bxs-save"></i>Submit</button>
+            
+            <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i>Cancel</button>
+        </div>
+        </div>
         </div>
         <hr>
         <form class="row g-3">
             <div class="col-md-6">
-                <label for="inputLastName1" class="form-label">First Name</label>
-                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bxs-user"></i></span>
-                    <input type="text" class="form-control border-start-0" id="inputLastName1" placeholder="First Name">
+                <label for="inputLastName1" class="form-label">Customer  Name</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bx-home"></i></span>
+                    <input type="text" class="form-control border-start-0" id="inputLastName1" placeholder="Customer Name" required>
                 </div>
             </div>
             <div class="col-md-6">
-                <label for="inputLastName2" class="form-label">Last Name</label>
+                <label for="inputLastName2" class="form-label">Contact Person Name</label>
                 <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bxs-user"></i></span>
-                    <input type="text" class="form-control border-start-0" id="inputLastName2" placeholder="Last Name">
+                    <input type="text" class="form-control border-start-0" id="inputLastName2" placeholder="Contact Person Name" required>
                 </div>
             </div>
-            <div class="col-12">
-                <label for="inputPhoneNo" class="form-label">Phone No</label>
-                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bxs-microphone"></i></span>
-                    <input type="text" class="form-control border-start-0" id="inputPhoneNo" placeholder="Phone No">
+            <div class="col-md-6">
+                <label for="inputPhoneNo" class="form-label">Customer  WebSite</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bx-world"></i></span>
+                    <input type="text" class="form-control border-start-0" id="inputPhoneNo" placeholder="Customer WebSite">
                 </div>
             </div>
-            <div class="col-12">
-                <label for="inputEmailAddress" class="form-label">Email Address</label>
-                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bxs-message"></i></span>
-                    <input type="text" class="form-control border-start-0" id="inputEmailAddress" placeholder="Email Address">
+            <div class="col-md-6">
+                <label for="inputEmailAddress1" class="form-label">Pan Card</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bx-card"></i></span>
+                    <input type="text" class="form-control border-start-0" id="inputEmailAddress" placeholder="Pan Card">
                 </div>
             </div>
-            <div class="col-12">
-                <label for="inputChoosePassword" class="form-label">Choose Password</label>
-                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bxs-lock-open"></i></span>
-                    <input type="text" class="form-control border-start-0" id="inputChoosePassword" placeholder="Choose Password">
+            <div class="col-md-6">
+                <label for="inputEmailAddress" class="form-label">Primary Email</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bx-at"></i></span>
+                    <input type="email" class="form-control border-start-0" id="inputEmailAddress" placeholder="Primary Email" required>
                 </div>
             </div>
-            <div class="col-12">
-                <label for="inputConfirmPassword" class="form-label">Confirm Password</label>
-                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bxs-lock"></i></span>
-                    <input type="text" class="form-control border-start-0" id="inputConfirmPassword" placeholder="Confirm Password">
+            <div class="col-md-6">
+                <label for="inputEmailAddress1" class="form-label">Secondary  Email</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bx-at"></i></span>
+                    <input type="email" class="form-control border-start-0" id="inputEmailAddress" placeholder="Secondary Email">
                 </div>
             </div>
-            <div class="col-12">
-                <label for="inputAddress3" class="form-label">Address</label>
-                <textarea class="form-control" id="inputAddress3" placeholder="Enter Address" rows="3"></textarea>
-            </div>
-            <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck2">
-                    <label class="form-check-label" for="gridCheck2">Check me out</label>
+            <div class="col-md-6">
+                <label for="inputChoosePassword" class="form-label">Primary Phone</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bx-phone"></i></span>
+                    <input type="text" class="form-control border-start-0" id="inputChoosePassword" placeholder="Primary Phone">
                 </div>
             </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-danger px-5">Register</button>
+            <div class="col-md-6">
+                <label for="inputChoosePassword" class="form-label">Secondary Phone</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bx-phone"></i></span>
+                    <input type="text" class="form-control border-start-0" id="inputChoosePassword" placeholder="Secondary Phone">
+                </div>
             </div>
+           
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck2">
+                <label class="form-check-label" for="gridCheck2">Same As Communication Address</label>
+            </div>
+            <div class="col-12">
+                <label for="inputAddress3" class="form-label">Communication Address</label>
+                <textarea class="form-control" id="inputAddress3" placeholder="Enter Address" rows="2"></textarea>
+            </div>
+           
+            <div class="col-md-6">
+                <label for="inputChoosePassword" class="form-label">Country</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bx-caret-right"></i></span>
+                    <select class="form-select" id="inputSelectCountry" aria-label="Default select example">
+                        <option selected="">India</option>
+                        <option value="1">United Kingdom</option>
+                        <option value="2">America</option>
+                        <option value="3">Dubai</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="inputChoosePassword" class="form-label">State</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bx-caret-right"></i></span>
+                    <select class="form-select" id="inputSelectCountry" aria-label="Default select example">
+                       
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="inputChoosePassword" class="form-label">City</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bx-caret-right"></i></span>
+                    <select class="form-select" id="inputSelectCountry" aria-label="Default select example">
+                      
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="inputChoosePassword" class="form-label">Pin Code</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bx-caret-right"></i></span>
+                    <input type="text" class="form-control border-start-0" id="inputChoosePassword" placeholder="Pin Code">
+                </div>
+            </div>  
+            
+            <div class="accordion" id="accordionExample">
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Billing Address
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body">
+                            <div class="row">
+                            <div class="col-12">
+                               
+                            </div>
+                           
+                                    
+                                                                          
+                            
+                          
+                            <div class="col-12">
+                                <label for="inputAddress3" class="form-label">Address</label>
+                                <textarea class="form-control" id="inputAddress3" placeholder="Enter Address" rows="2"></textarea>
+                            </div>
+                           
+                            <div class="col-md-6">
+                                <label for="inputChoosePassword" class="form-label">Country</label>
+                                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bx-caret-right"></i></span>
+                                    <select class="form-select" id="inputSelectCountry" aria-label="Default select example">
+                                        <option selected="">India</option>
+                                        <option value="1">United Kingdom</option>
+                                        <option value="2">America</option>
+                                        <option value="3">Dubai</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputChoosePassword" class="form-label">State</label>
+                                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bx-caret-right"></i></span>
+                                    <select class="form-select" id="inputSelectCountry" aria-label="Default select example">
+                                       
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputChoosePassword" class="form-label">City</label>
+                                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bx-caret-right"></i></span>
+                                    <select class="form-select" id="inputSelectCountry" aria-label="Default select example">
+                                      
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputChoosePassword" class="form-label">Pin Code</label>
+                                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bx-caret-right"></i></span>
+                                    <input type="text" class="form-control border-start-0" id="inputChoosePassword" placeholder="Pin Code">
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Othre Details
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                        <div class="accordion-body">
+                                
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="inputEmailAddress" class="form-label">Gst No</label>
+                                        <div class="input-group"> <span class="input-group-text bg-transparent"><i class="bx bx-dollar-circle"></i></span>
+                                            <input type="text" class="form-control border-start-0" id="inputEmailAddress" placeholder="Gst No" required>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+
+           
+                    
+                       
+                        
+            
+          
+           
+            
+           
+            
+            
         </form>
     </div>
 </div>

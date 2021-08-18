@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild,AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as $ from "jquery";
-import 'datatables.net-buttons';
 @Component({
   selector: 'app-ward-list',
   templateUrl: './ward-list.component.html',
@@ -10,16 +9,24 @@ import 'datatables.net-buttons';
 export class WardListComponent implements OnInit {
 
   constructor(private router:Router) { }
-
+  @ViewChild('example2') table;
+  dataTable: any;
+  dtOptions: any;
   ngOnInit(): void {
-   
-			var table = $('#example2').DataTable( {
-				lengthChange: false,
-				buttons: [ 'copy', 'excel', 'pdf', 'print']
-			} );
-		 
-			table.buttons().container()
-				.appendTo( '#example2_wrapper .col-md-6:eq(0)' );
+   			
+  }
+  ngAfterViewInit(){   
+    this.dtOptions = {
+      dom: 'Bfrtip',
+      buttons: [
+          'copyHtml5',
+          'excelHtml5',
+          'csvHtml5',
+          'pdfHtml5'
+      ]     
+  };
+    this.dataTable = $(this.table.nativeElement);
+    this.dataTable.DataTable(this.dtOptions);    
   }
   addWardForm(){
     this.router.navigateByUrl('/login/header/add-update-ward')
