@@ -55,7 +55,6 @@
              "src/assets/js/pace.min.js",
              "src/assets/js/bootstrap.bundle.min.js",
 	
-	           "src/assets/js/jquery.min.js",
 	           "src/assets/plugins/simplebar/js/simplebar.min.js",
 	           "src/assets/plugins/metismenu/js/metisMenu.min.js",
 	           "src/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js",
