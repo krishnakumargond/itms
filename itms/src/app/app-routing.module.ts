@@ -15,6 +15,10 @@ import { ContactsComponent } from './shared/contacts/contacts.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { ForgetPasswordComponent } from './user-authentication/forget-password/forget-password.component';
 import { LoginComponent } from './user-authentication/login/login.component';
+import { CompanyUploadComponent } from './master/company/components/company-upload/company-upload.component';
+import { VehicleListComponent } from './master/vehicle/components/vehicle-list/vehicle-list.component';
+import { VehicleFormComponent } from './master/vehicle/components/vehicle-form/vehicle-form.component';
+import { VehicleUploadComponent } from './master/vehicle/components/vehicle-upload/vehicle-upload.component';
 
 const routes: Routes = [
   {path:'login/header', component:HeaderComponent, 
@@ -32,6 +36,10 @@ const routes: Routes = [
       {path:'ward-form', component:WardFormComponent},
       {path:'company', component:CompanyListComponent},
       {path:'Add-Update-Company', component:CompanyFormComponent},
+      {path:'Add-Upload-Company', component:CompanyUploadComponent},
+      {path:'List-Vehicle', component:VehicleListComponent},
+      {path:'Add-Update-Vehicle', component:VehicleFormComponent},
+      {path:'Add-Upload-Vehicle', component:VehicleUploadComponent},
     ]
 },
   {path:'login', component:LoginComponent},

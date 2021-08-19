@@ -38,9 +38,9 @@
               "src/styles.css",
               "src/assets/plugins/datatable/css/dataTables.bootstrap5.min.css",
               "src/assets/plugins/simplebar/css/simplebar.css",
-              
+              "src/assets/plugins/fancy-file-uploader/fancy_fileupload.css",
               "src/assets/plugins/metismenu/css/metisMenu.min.css", 
-
+              "src/assets/plugins/Drag-And-Drop/dist/imageuploadify.min.css",
               "src/assets/css/pace.min.css", 
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/app.css",
@@ -61,6 +61,11 @@
 	           "src/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js",
              "src/assets/plugins/datatable/js/jquery.dataTables.min.js",
              "src/assets/plugins/datatable/js/dataTables.bootstrap5.min.js",
+             "src/assets/plugins/fancy-file-uploader/jquery.ui.widget.js",
+	"src/assets/plugins/fancy-file-uploader/jquery.fileupload.js",
+	"src/assets/plugins/fancy-file-uploader/jquery.iframe-transport.js",
+	"src/assets/plugins/fancy-file-uploader/jquery.fancy-fileupload.js",
+	"src/assets/plugins/Drag-And-Drop/dist/imageuploadify.min.js",
 
 	           "src/assets/js/app.js",
 	           "src/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js",

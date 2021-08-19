@@ -2,11 +2,11 @@ import { Component, OnInit,ViewChild,AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-company-list',
-  templateUrl: './company-list.component.html',
-  styleUrls: ['./company-list.component.css']
+  selector: 'app-vehicle-list',
+  templateUrl: './vehicle-list.component.html',
+  styleUrls: ['./vehicle-list.component.css']
 })
-export class CompanyListComponent implements OnInit,AfterViewInit {
+export class VehicleListComponent implements OnInit,AfterViewInit {
 
   constructor(private router: Router) { }
   @ViewChild('example3') table;
@@ -28,12 +28,13 @@ export class CompanyListComponent implements OnInit,AfterViewInit {
     this.dataTable = $(this.table.nativeElement);
     this.dataTable.DataTable(this.dtOptions);    
   }
-  addUpdateCompany(){
+  addUpdateVehicle(){
     console.log('working')
-    this.router.navigateByUrl('/login/header/Add-Update-Company')
+    this.router.navigateByUrl('/login/header/Add-Update-Vehicle')
   }
-  UploadCompany(){
+  UploadCompanyVehicle(){
     console.log('working')
-    this.router.navigateByUrl('/login/header/Add-Upload-Company')
+    this.router.navigateByUrl('/login/header/Add-Upload-Vehicle')
   }
+
 }
