@@ -1,11 +1,12 @@
-import { Component, OnInit,ViewChild,AfterViewInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+
 @Component({
-  selector: 'app-ward-list',
-  templateUrl: './ward-list.component.html',
-  styleUrls: ['./ward-list.component.css']
+  selector: 'app-user-list',
+  templateUrl: './user-list.component.html',
+  styleUrls: ['./user-list.component.css']
 })
-export class WardListComponent implements OnInit, AfterViewInit {
+export class UserListComponent implements OnInit, AfterViewInit {
 
   constructor(private router:Router) { }
   @ViewChild('example5') table;
@@ -29,7 +30,8 @@ export class WardListComponent implements OnInit, AfterViewInit {
   }
 
   addUpdate(){    
-    this.router.navigateByUrl('/login/header/add-update-ward')
+    this.router.navigateByUrl('/login/header/add-update-user')
   }
+
 
 }

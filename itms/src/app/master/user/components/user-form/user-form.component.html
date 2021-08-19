@@ -7,19 +7,19 @@
                     <ol class="breadcrumb mb-0 p-0">
                         <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Ward</li>
+                        <li class="breadcrumb-item active" aria-current="page">User</li>
                     </ol>
                 </nav>
             </div>
         </div>
-<h6 class="mb-0 text-uppercase">Ward</h6>
+<h6 class="mb-0 text-uppercase">User</h6>
 <hr>
 <div class="card border-top border-0 border-4 border-danger">
     <div class="card-body p-5">
         <div class="card-title d-flex align-items-center">
             <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
             </div>
-            <h5 class="mb-0 text-danger">Add/Update Ward</h5>
+            <h5 class="mb-0 text-danger">Add/Update User</h5>
             <div class="ms-auto">
                 <div class="col-12">
                
@@ -32,8 +32,15 @@
         <hr>
         <form class="row g-3"> 
             <div class="col-md-6">
-                <label class="form-label">Select Zone</label>
-                <select #dropdown class="single-select form-control">
+                <label for="inputLastName1" class="form-label">User Name</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-current-location"></i></span>
+                    <input type="text" class="form-control border-start-0" id="UserName" placeholder="Enter User Name">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Employee</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-current-location"></i></span>
+                <select #dropdown4 class="single-select form-control">
                     <option value="United States">United States</option>
                     <option value="United Kingdom">United Kingdom</option>
                     <option value="Afghanistan">Afghanistan</option>
@@ -41,21 +48,40 @@
                     <option value="Zambia">Zambia</option>
                     <option value="Zimbabwe">Zimbabwe</option>
                 </select>
-            </div>  
-            <div class="col-md-6">
-                <label for="inputLastName1" class="form-label">Ward Name</label>
-                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-current-location"></i></span>
-                    <input type="text" class="form-control border-start-0" id="wardName" placeholder="Enter Ward Name">
                 </div>
-            </div>
-            <br/><br/><br/><br/>
+            </div>  
             
             <div class="col-md-6">
-                <label for="inputPhoneNo" class="form-label">Ward Short Name</label>
+                <label class="form-label">Role</label>
                 <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-current-location"></i></span>
-                    <input type="text" class="form-control border-start-0" id="wardShortName" placeholder="Enter Ward Short Name">
+                <select #dropdown5 class="single-select form-control">
+                    <option value="United States">United States</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Aland Islands">Aland Islands</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                </select>
                 </div>
-            </div>
+            </div> 
+            <div class="col-md-6">
+                <label for="inputLastName1" class="form-label">Mobile No</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-current-location"></i></span>
+                    <input type="text" class="form-control border-start-0" id="UserName" placeholder="Enter Mobile">
+                </div>
+            </div> 
+            <div class="col-md-6">
+                <label for="inputLastName1" class="form-label">Password</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-current-location"></i></span>
+                    <input type="text" class="form-control border-start-0" id="UserName" placeholder="Enter Password">
+                </div>
+            </div> 
+            <div class="col-md-6">
+                <label for="inputLastName1" class="form-label">Login ID</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-current-location"></i></span>
+                    <input type="text" class="form-control border-start-0" id="UserName" placeholder="Enter Login Id">
+                </div>
+            </div> 
             <div class="col-md-6">
                 <label for="inputPhoneNo" class="form-label mt-3">Status</label>
                     <div class="input-group">

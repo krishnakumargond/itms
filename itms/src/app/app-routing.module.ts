@@ -15,31 +15,41 @@ import { ContactsComponent } from './shared/contacts/contacts.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { ForgetPasswordComponent } from './user-authentication/forget-password/forget-password.component';
 import { LoginComponent } from './user-authentication/login/login.component';
+<<<<<<< HEAD
 import { CompanyUploadComponent } from './master/company/components/company-upload/company-upload.component';
 import { VehicleListComponent } from './master/vehicle/components/vehicle-list/vehicle-list.component';
 import { VehicleFormComponent } from './master/vehicle/components/vehicle-form/vehicle-form.component';
 import { VehicleUploadComponent } from './master/vehicle/components/vehicle-upload/vehicle-upload.component';
+=======
+import { UserListComponent } from './master/user/components/user-list/user-list.component';
+import { UserFormComponent } from './master/user/components/user-form/user-form.component';
+>>>>>>> 5840cca2066e66ec0f967c57945406638fadede1
 
 const routes: Routes = [
   {path:'login/header', component:HeaderComponent, 
     children:[
       {path:'contacts', component:ContactsComponent},
       {path:'product', component:ProductListComponent},
-      {path:'zone-master', component:ZoneListComponent},
-      {path:'zone-form', component:ZoneFormComponent},
+      {path:'zone', component:ZoneListComponent},
+      {path:'add-update-zone', component:ZoneFormComponent},
       {path:'circle', component:CircleListComponent},
       {path:'add-update-circle', component:CircleFormComponent},
       {path:'role', component:RoleListComponent},
       {path:'add-update-role', component:RoleFormComponent},
       {path:'Add-Update', component:CircleFormComponent},
-      {path:'ward-master', component:WardListComponent},
-      {path:'ward-form', component:WardFormComponent},
+      {path:'ward', component:WardListComponent},
+      {path:'add-update-ward', component:WardFormComponent},
       {path:'company', component:CompanyListComponent},
       {path:'Add-Update-Company', component:CompanyFormComponent},
+<<<<<<< HEAD
       {path:'Add-Upload-Company', component:CompanyUploadComponent},
       {path:'List-Vehicle', component:VehicleListComponent},
       {path:'Add-Update-Vehicle', component:VehicleFormComponent},
       {path:'Add-Upload-Vehicle', component:VehicleUploadComponent},
+=======
+      {path:'user',component:UserListComponent},
+      {path:'add-update-user', component:UserFormComponent}
+>>>>>>> 5840cca2066e66ec0f967c57945406638fadede1
     ]
 },
   {path:'login', component:LoginComponent},
