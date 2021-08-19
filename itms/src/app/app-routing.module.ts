@@ -15,6 +15,8 @@ import { ContactsComponent } from './shared/contacts/contacts.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { ForgetPasswordComponent } from './user-authentication/forget-password/forget-password.component';
 import { LoginComponent } from './user-authentication/login/login.component';
+import { UserListComponent } from './master/user/components/user-list/user-list.component';
+import { UserFormComponent } from './master/user/components/user-form/user-form.component';
 
 const routes: Routes = [
   {path:'login/header', component:HeaderComponent, 
@@ -32,6 +34,8 @@ const routes: Routes = [
       {path:'add-update-ward', component:WardFormComponent},
       {path:'company', component:CompanyListComponent},
       {path:'Add-Update-Company', component:CompanyFormComponent},
+      {path:'user',component:UserListComponent},
+      {path:'add-update-user', component:UserFormComponent}
     ]
 },
   {path:'login', component:LoginComponent},

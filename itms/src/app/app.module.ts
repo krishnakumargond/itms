@@ -21,6 +21,8 @@ import { RoleListComponent } from './master/role/components/role-list/role-list.
 import { RoleFormComponent } from './master/role/components/role-form/role-form.component';
 import { CompanyFormComponent } from './master/company/components/company-form/company-form.component';
 import { CompanyListComponent } from './master/company/components/company-list/company-list.component';
+import { UserListComponent } from './master/user/components/user-list/user-list.component';
+import { UserFormComponent } from './master/user/components/user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { CompanyListComponent } from './master/company/components/company-list/c
     RoleFormComponent,
     CompanyFormComponent,
     CompanyListComponent,
+    UserListComponent,
+    UserFormComponent,
   ],
   imports: [
     BrowserModule,
