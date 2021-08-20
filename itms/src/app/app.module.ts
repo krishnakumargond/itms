@@ -22,6 +22,12 @@ import { RoleListComponent } from './master/role/components/role-list/role-list.
 import { RoleFormComponent } from './master/role/components/role-form/role-form.component';
 import { CompanyFormComponent } from './master/company/components/company-form/company-form.component';
 import { CompanyListComponent } from './master/company/components/company-list/company-list.component';
+import { CompanyUploadComponent } from './master/company/components/company-upload/company-upload.component';
+import { VehicleFormComponent } from './master/vehicle/components/vehicle-form/vehicle-form.component';
+import { VehicleListComponent } from './master/vehicle/components/vehicle-list/vehicle-list.component';
+import { VehicleUploadComponent } from './master/vehicle/components/vehicle-upload/vehicle-upload.component';
+import { VehicleTypeFormComponent } from './master/vehicle-Type/components/vehicle-type-form/vehicle-type-form.component';
+
 import { UserListComponent } from './master/user/components/user-list/user-list.component';
 import { UserFormComponent } from './master/user/components/user-form/user-form.component';
 
@@ -46,6 +52,11 @@ import { UserFormComponent } from './master/user/components/user-form/user-form.
     RoleFormComponent,
     CompanyFormComponent,
     CompanyListComponent,
+    CompanyUploadComponent,
+    VehicleFormComponent,
+    VehicleListComponent,
+    VehicleUploadComponent,
+    VehicleTypeFormComponent,
     UserListComponent,
     UserFormComponent,
   ],
