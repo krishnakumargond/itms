@@ -12,61 +12,94 @@
                 </nav>
             </div>
         </div>
-<h6 class="mb-0 text-uppercase">Ward</h6>
-<hr>
-<div class="card border-top border-0 border-4 border-danger">
-    <div class="card-body p-5">
-        <div class="card-title d-flex align-items-center">
-            <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
-            </div>
-            <h5 class="mb-0 text-danger">Add/Update Ward</h5>
-            <div class="ms-auto">
-                <div class="col-12">
+        <h6 class="mb-0 text-uppercase">Ward</h6>
+        <hr>
+        <div class="card border-top border-0 border-4 border-danger">
+            <div class="card-body p-5">
+                <div class="card-title d-flex align-items-center">
+                    <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
+                    </div>
+                    <div class="col-sm-6">
+                        <h5 class="mb-0 text-danger">Add/Update Ward</h5>
+                    </div>                   
+                    <div class="modal-footer  align-items-right">
+                        <button type="button" class="btn btn-primary" [disabled]="!formValue.valid">Submit</button>
+                        <button type="button" class="btn btn-danger">Cancel</button>
+                    </div>
+                    <!-- <div class="ms-auto">
+                <div class="col-sm-6">
                
-            <button type="submit" class="btn btn-primary px-2"><i class="bx bxs-save"></i>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn-primary px-2" [disabled]="!formValue.valid"><i class="bx bxs-save"></i>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
             <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i>Cancel</button>
         </div>
+        </div> -->
+                </div>
+
+                <hr>
+                <form class="row g-3" [formGroup]='formValue'>
+                    <div class="col-md-6">
+                        <label class="form-label">ward<span class="text-danger" >**</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <select #dropdown class="single-select form-control" formControlName="selectZone">
+                                <option value="" disabled selected>Select Zone</option>
+                                <option value="United States">United States</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="Aland Islands">Aland Islands</option>
+                                <option value="Zambia">Zambia</option>
+                                <option value="Zimbabwe">Zimbabwe</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="wardName" class="form-label">Ward Name<span class="text-danger" >**</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <input type="text" class="form-control border-start-0" id="wardName"
+                                placeholder="Enter Ward Name" formControlName="wardName" autocomplete="off">
+                        </div>
+                        <p *ngIf="formValue.get('wardName').hasError('required') && formValue.get('wardName').touched"
+                            class="text-danger">ward name is required**</p>
+                        <p *ngIf="formValue.get('wardName').hasError('minlength') && formValue.get('wardName').touched"
+                            class="text-danger">Ward name should contain atleast 5 characters**</p>
+                        <p *ngIf="formValue.get('wardName').hasError('maxlength') && formValue.get('wardName').touched"
+                            class="text-danger">Ward name should not contain more than 15 characters**</p>
+                    </div>
+                    <br /><br /><br /><br />
+
+                    <div class="col-md-6">
+                        <label for="wardShortName" class="form-label">Ward Short Name<span class="text-danger" >**</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <input type="text" class="form-control border-start-0" id="wardShortName"
+                                placeholder="Enter Ward Short Name" formControlName="wardShortName" required
+                                autocomplete="off">
+                        </div>
+                        <p *ngIf="formValue.get('wardShortName').hasError('required') && formValue.get('wardShortName').touched"
+                            class="text-danger">Ward short name is required**</p>
+                        <p *ngIf="formValue.get('wardShortName').hasError('minlength') && formValue.get('wardShortName').touched"
+                            class="text-danger">Ward short name should contain atleast 5 characters**</p>
+                        <p *ngIf="formValue.get('wardShortName').hasError('maxlength') && formValue.get('wardShortName').touched"
+                            class="text-danger">Ward short name should not contain more than 15 characters**</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="isActiveCheckBox" class="form-label mt-3">Status<span class="text-danger" >**</span></label>
+                        <div class="input-group">
+                            <input class="form-check-input" type="checkbox" id="isActiveCheckBox"
+                                formControlName="status">
+                            &nbsp;&nbsp;<label class="form-check-label" for="isActiveCheckBox">is Active</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="remark" class="form-label">Remark</label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-message-add"></i></span>
+                            <input type="text" class="form-control border-start-0" id="remark" placeholder="Add Remark" formControlName="remark">
+                        </div>
+                    </div> 
+
+                </form>
+            </div>
         </div>
-        </div>
-       
-        <hr>
-        <form class="row g-3"> 
-            <div class="col-md-6">
-                <label class="form-label">Select Zone</label>
-                <select #dropdown class="single-select form-control">
-                    <option value="United States">United States</option>
-                    <option value="United Kingdom">United Kingdom</option>
-                    <option value="Afghanistan">Afghanistan</option>
-                    <option value="Aland Islands">Aland Islands</option>
-                    <option value="Zambia">Zambia</option>
-                    <option value="Zimbabwe">Zimbabwe</option>
-                </select>
-            </div>  
-            <div class="col-md-6">
-                <label for="inputLastName1" class="form-label">Ward Name</label>
-                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-current-location"></i></span>
-                    <input type="text" class="form-control border-start-0" id="wardName" placeholder="Enter Ward Name">
-                </div>
-            </div>
-            <br/><br/><br/><br/>
-            
-            <div class="col-md-6">
-                <label for="inputPhoneNo" class="form-label">Ward Short Name</label>
-                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-current-location"></i></span>
-                    <input type="text" class="form-control border-start-0" id="wardShortName" placeholder="Enter Ward Short Name">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label for="inputPhoneNo" class="form-label mt-3">Status</label>
-                    <div class="input-group">
-                    <input class="form-check-input" type="checkbox" id="gridCheck2">
-                    &nbsp;&nbsp;<label class="form-check-label" for="gridCheck2">is Active</label>
-                </div>
-            </div>
-           
-           
-        </form>
     </div>
-</div>
-</div>
 </div>
