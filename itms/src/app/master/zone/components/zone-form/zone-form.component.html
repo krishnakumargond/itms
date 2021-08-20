@@ -19,22 +19,30 @@
         <div class="card-title d-flex align-items-center">
             <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
             </div>
-            <h5 class="mb-0 text-danger">Add/Update Zone</h5>
+            <div class="col-sm-6">
+                <h5 class="mb-0 text-danger">Add/Update Ward</h5>
+            </div>                   
+            <div class="modal-footer  align-items-right">
+                <button type="button" class="btn btn-primary" [disabled]="!formValue.valid">Submit</button>
+                <button type="button" class="btn btn-danger">Cancel</button>
+            </div>
+            <!-- <h5 class="mb-0 text-danger">Add/Update Zone</h5>
             <div class="ms-auto">
                 <div class="col-12">
                
-            <button type="submit" class="btn btn-primary px-2"><i class="bx bxs-save"></i>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button"   class="btn btn-primary px-2" [disabled]="!formValue.valid"><i class="bx bxs-save"></i>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
             <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i>Cancel</button>
         </div>
-        </div>
+        </div> -->
         </div>
        
         <hr>
-        <form class="row g-3"> 
+        <form class="row g-3" [formGroup]="formValue"> 
             <div class="col-md-6">
-                <label class="form-label">Select Circle</label>
-                <select #drop class="single-select form-control">
-                    <option value="United States">United States</option>
+                <label class="form-label">Select Circle<span class="text-danger" >**</span></label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-bullseye"></i></span>
+                <select #drop class="single-select form-control" formControlName="selectCircle">
+                    <option value="" disabled selected>Select Circle</option>
                     <option value="United Kingdom">United Kingdom</option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Aland Islands">Aland Islands</option>
@@ -87,29 +95,41 @@
                     <option value="Zambia">Zambia</option>
                     <option value="Zimbabwe">Zimbabwe</option>
                 </select>
+                </div>
             </div>  
             <div class="col-md-6">
-                <label for="inputLastName1" class="form-label">Zone Name</label>
+                <label for="zoneName" class="form-label">Zone Name<span class="text-danger" >**</span></label>
                 <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-bullseye"></i></span>
-                    <input type="text" class="form-control border-start-0" id="zoneName" placeholder="Enter Zone Name">
+                    <input type="text" class="form-control border-start-0" id="zoneName" placeholder="Enter Zone Name" formControlName="zoneName" autocomplete="off">
                 </div>
+                <p *ngIf="formValue.get('zoneName').hasError('required') && formValue.get('zoneName').touched" class="text-danger">Zone name is required**</p>
+                <p *ngIf="formValue.get('zoneName').hasError('minlength') && formValue.get('zoneName').touched" class="text-danger">Zone name should contain atleast 5 characters**</p>
+                <p *ngIf="formValue.get('zoneName').hasError('maxlength') && formValue.get('zoneName').touched" class="text-danger">Zone name should not contain more than 15 characters**</p>
             </div>
             <br/><br/><br/><br/>
             
             <div class="col-md-6">
-                <label for="inputPhoneNo" class="form-label">Zone Short Name</label>
+                <label for="ZoneShortName" class="form-label">Zone Short Name<span class="text-danger" >**</span></label>
                 <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-bullseye"></i></span>
-                    <input type="text" class="form-control border-start-0" id="ZoneShortName" placeholder="Enter Zone Short Name">
+                    <input type="text" class="form-control border-start-0" id="ZoneShortName" placeholder="Enter Zone Short Name" formControlName="zoneShortName" autocomplete="off">
+                </div>
+                <p *ngIf="formValue.get('zoneShortName').hasError('required') && formValue.get('zoneShortName').touched" class="text-danger">Zone short name is required**</p>
+                <p *ngIf="formValue.get('zoneShortName').hasError('minlength') && formValue.get('zoneShortName').touched" class="text-danger">Zone short name should contain atleast 2 characters**</p>
+                <p *ngIf="formValue.get('zoneShortName').hasError('maxlength') && formValue.get('zoneShortName').touched" class="text-danger">Zone short name should not contain more than 5 characters**</p>
+            </div>
+            <div class="col-md-6">
+                <label for="isActiveCheckBox" class="form-label mt-3">Status<span class="text-danger" >**</span></label>
+                    <div class="input-group">
+                    <input class="form-check-input" type="checkbox" id="isActiveCheckBox" formControlName="status">
+                    &nbsp;&nbsp;<label class="form-check-label" for="isActiveCheckBox" >is Active</label>
                 </div>
             </div>
             <div class="col-md-6">
-                <label for="inputPhoneNo" class="form-label mt-3">Status</label>
-                    <div class="input-group">
-                    <input class="form-check-input" type="checkbox" id="gridCheck2">
-                    &nbsp;&nbsp;<label class="form-check-label" for="gridCheck2">is Active</label>
+                <label for="remark" class="form-label">Remark</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-message-add"></i></span>
+                    <input type="text" class="form-control border-start-0" id="remark" placeholder="Add Remark" formControlName="remark">
                 </div>
-            </div>
-           
+            </div> 
            
         </form>
     </div>

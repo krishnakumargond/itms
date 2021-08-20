@@ -19,28 +19,39 @@
         <div class="card-title d-flex align-items-center">
             <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
             </div>
-            <h5 class="mb-0 text-danger">Add/Update User</h5>
+            <div class="col-sm-6">
+                <h5 class="mb-0 text-danger">Add/Update User</h5>
+            </div>                   
+            <div class="modal-footer  align-items-right">
+                <button type="button" class="btn btn-primary" [disabled]="!formValue.valid">Submit</button>
+                <button type="button" class="btn btn-danger">Cancel</button>
+            </div>
+            <!-- <h5 class="mb-0 text-danger">Add/Update User</h5>
             <div class="ms-auto">
                 <div class="col-12">
                
             <button type="submit" class="btn btn-primary px-2"><i class="bx bxs-save"></i>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
             <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i>Cancel</button>
         </div>
-        </div>
+        </div> -->
         </div>
        
         <hr>
-        <form class="row g-3"> 
+        <form class="row g-3" [formGroup]="formValue"> 
             <div class="col-md-6">
-                <label for="inputLastName1" class="form-label">User Name</label>
-                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-current-location"></i></span>
-                    <input type="text" class="form-control border-start-0" id="UserName" placeholder="Enter User Name">
+                <label for="inputLastName1" class="form-label">User Name<span class="text-danger">**</span></label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-user-circle"></i></span>
+                    <input type="text" class="form-control border-start-0" id="UserName" placeholder="Enter User Name" formControlName="userName">
                 </div>
+                <p *ngIf="formValue.get('userName').hasError('required') && formValue.get('userName').touched" class="text-danger">User name is required**</p>
+                <p *ngIf="formValue.get('userName').hasError('minlength') && formValue.get('userName').touched" class="text-danger">User name should contain atleast 3 characters**</p>
+                <p *ngIf="formValue.get('userName').hasError('maxlength') && formValue.get('userName').touched" class="text-danger">User name should not contain more than 255 characters**</p>
             </div>
             <div class="col-md-6">
-                <label class="form-label">Employee</label>
-                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-current-location"></i></span>
-                <select #dropdown4 class="single-select form-control">
+                <label class="form-label">Employee <span class="text-danger">**</span></label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-user-check"></i></span>
+                <select #dropdown4 class="single-select form-control" formControlName="employee">
+                    <option value="" disabled selected>Select Employee</option>
                     <option value="United States">United States</option>
                     <option value="United Kingdom">United Kingdom</option>
                     <option value="Afghanistan">Afghanistan</option>
@@ -52,10 +63,10 @@
             </div>  
             
             <div class="col-md-6">
-                <label class="form-label">Role</label>
-                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-current-location"></i></span>
-                <select #dropdown5 class="single-select form-control">
-                    <option value="United States">United States</option>
+                <label class="form-label">Role<span class="text-danger">**</span></label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-briefcase-alt"></i></span>
+                <select #dropdown5 class="single-select form-control" formControlName="role">
+                    <option value="" disabled selected>Select Role</option>
                     <option value="United Kingdom">United Kingdom</option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Aland Islands">Aland Islands</option>
@@ -65,30 +76,37 @@
                 </div>
             </div> 
             <div class="col-md-6">
-                <label for="inputLastName1" class="form-label">Mobile No</label>
-                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-current-location"></i></span>
-                    <input type="text" class="form-control border-start-0" id="UserName" placeholder="Enter Mobile">
+                <label for="inputLastName1" class="form-label">Mobile No<span class="text-danger">**</span></label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-mobile-alt"></i></span>
+                    <input type="text" class="form-control border-start-0" id="UserName" placeholder="Enter Mobile" formControlName="mobile">
                 </div>
             </div> 
             <div class="col-md-6">
-                <label for="inputLastName1" class="form-label">Password</label>
-                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-current-location"></i></span>
-                    <input type="text" class="form-control border-start-0" id="UserName" placeholder="Enter Password">
+                <label for="inputLastName1" class="form-label">Password<span class="text-danger">**</span></label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-lock"></i></span>
+                    <input type="text" class="form-control border-start-0" id="UserName" placeholder="Enter Password" formControlName="password">
+                </div>
+                <p *ngIf="formValue.get('password').hasError('pattern') && formValue.get('password').touched" class="text-danger">password should contain atleast a uppercase letter,a lowercase letter, a special character and should be atleast 8 characters long**</p>
+            </div> 
+            <div class="col-md-6">
+                <label for="loginID" class="form-label">Login ID<span class="text-danger">**</span></label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-user"></i></span>
+                    <input type="text" class="form-control border-start-0" id="loginID" placeholder="Enter Login Id" formControlName="loginID">
                 </div>
             </div> 
             <div class="col-md-6">
-                <label for="inputLastName1" class="form-label">Login ID</label>
-                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-current-location"></i></span>
-                    <input type="text" class="form-control border-start-0" id="UserName" placeholder="Enter Login Id">
-                </div>
-            </div> 
-            <div class="col-md-6">
-                <label for="inputPhoneNo" class="form-label mt-3">Status</label>
+                <label for="status" class="form-label mt-3">Status<span class="text-danger">**</span></label>
                     <div class="input-group">
-                    <input class="form-check-input" type="checkbox" id="gridCheck2">
-                    &nbsp;&nbsp;<label class="form-check-label" for="gridCheck2">is Active</label>
+                    <input class="form-check-input" type="checkbox" id="status" formControlName="status">
+                    &nbsp;&nbsp;<label class="form-check-label" for="status">is Active</label>
                 </div>
             </div>
+            <div class="col-md-6">
+                <label for="remark" class="form-label">Remark</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-message-add"></i></span>
+                    <input type="text" class="form-control border-start-0" id="remark" placeholder="Add Remark" formControlName="remark">
+                </div>
+            </div> 
            
            
         </form>
