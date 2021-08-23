@@ -4,7 +4,6 @@ import { CircleFormComponent } from './master/circle/components/circle-form/circ
 import { CircleListComponent } from './master/circle/components/circle-list/circle-list.component';
 import { CompanyFormComponent } from './master/company/components/company-form/company-form.component';
 import { CompanyListComponent } from './master/company/components/company-list/company-list.component';
-import { ProductListComponent } from './master/product/components/product-list/product-list.component';
 import { WardFormComponent } from './master/ward/components/ward-form/ward-form.component';
 import { WardListComponent } from './master/ward/components/ward-list/ward-list.component';
 import { RoleFormComponent } from './master/role/components/role-form/role-form.component';
@@ -26,7 +25,6 @@ const routes: Routes = [
   {path:'login/header', component:HeaderComponent, 
     children:[
       {path:'contacts', component:ContactsComponent},
-      {path:'product', component:ProductListComponent},
       {path:'zone', component:ZoneListComponent},
       {path:'add-update-zone', component:ZoneFormComponent},
       {path:'circle', component:CircleListComponent},

@@ -26,7 +26,8 @@ formValue:FormGroup;
         Validators.minLength(2),
         Validators.maxLength(5)
       ]),
-      status:new FormControl(false)
+      status:new FormControl(false),
+      remark:new FormControl('') 
     })
   }
 
