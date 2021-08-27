@@ -25,6 +25,10 @@ import { AreaListComponent } from './master/area/components/area-list/area-list.
 
 import { SectorFormComponent } from './master/sector/components/sector-form/sector-form.component';
 import { SectorListComponent } from './master/sector/components/sector-list/sector-list.component';
+
+import { VehicletypeFormComponent } from './master/vehicletype/components/vehicletype-form/vehicletype-form.component';
+import { VehicletypeListComponent } from './master/vehicletype/components/vehicletype-list/vehicletype-list.component';
+
 const routes: Routes = [
   {path:'login/header', component:HeaderComponent, 
     children:[
@@ -49,8 +53,10 @@ const routes: Routes = [
       {path:'app-area-list', component:AreaListComponent},
       {path:'app-area-form', component:AreaFormComponent},
       {path:'app-sector-list', component:SectorListComponent},
-      {path:'app-sector-form', component:SectorFormComponent}
-  
+      {path:'app-sector-form', component:SectorFormComponent},
+      {path:'app-vehicletype-list', component:VehicletypeListComponent},
+      {path:'app-vehicletype-form', component:VehicletypeFormComponent}
+    
     ]
 },
   {path:'login', component:LoginComponent},

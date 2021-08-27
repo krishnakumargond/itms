@@ -33,6 +33,8 @@ import { AreaListComponent } from './master/area/components/area-list/area-list.
 import { AreaFormComponent } from './master/area/components/area-form/area-form.component';
 import { SectorFormComponent } from './master/sector/components/sector-form/sector-form.component';
 import { SectorListComponent } from './master/sector/components/sector-list/sector-list.component';
+import { VehicletypeFormComponent } from './master/vehicletype/components/vehicletype-form/vehicletype-form.component';
+import { VehicletypeListComponent } from './master/vehicletype/components/vehicletype-list/vehicletype-list.component';
 
 
 @NgModule({
@@ -66,6 +68,8 @@ import { SectorListComponent } from './master/sector/components/sector-list/sect
     AreaListComponent,
     SectorFormComponent,
     SectorListComponent,
+    VehicletypeFormComponent,
+    VehicletypeListComponent,
   ],
   imports: [
     BrowserModule,
