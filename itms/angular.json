@@ -38,9 +38,9 @@
               "src/styles.css",
               "src/assets/plugins/datatable/css/dataTables.bootstrap5.min.css",
               "src/assets/plugins/simplebar/css/simplebar.css",
-              
+              "src/assets/plugins/fancy-file-uploader/fancy_fileupload.css",
               "src/assets/plugins/metismenu/css/metisMenu.min.css", 
-
+              "src/assets/plugins/Drag-And-Drop/dist/imageuploadify.min.css",
               "src/assets/css/pace.min.css", 
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/app.css",
@@ -49,24 +49,29 @@
               "src/assets/css/dark-theme.css", 
               "src/assets/css/semi-dark.css", 
               "src/assets/css/header-colors.css",
-              "src/assets/plugins/datatable/css/dataTables.bootstrap5.min.css"
+              "src/assets/plugins/datatable/css/dataTables.bootstrap5.min.css",
+              "src/assets/plugins/select2/css/select2.min.css",
+              "src/assets/plugins/select2/css/select2-bootstrap4.css"
             ],
             "scripts": [
              "src/assets/js/pace.min.js",
-             "src/assets/js/bootstrap.bundle.min.js",
-	
+             "src/assets/js/bootstrap.bundle.min.js",	
 	           "src/assets/js/jquery.min.js",
 	           "src/assets/plugins/simplebar/js/simplebar.min.js",
 	           "src/assets/plugins/metismenu/js/metisMenu.min.js",
 	           "src/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js",
              "src/assets/plugins/datatable/js/jquery.dataTables.min.js",
              "src/assets/plugins/datatable/js/dataTables.bootstrap5.min.js",
-
+             "src/assets/plugins/fancy-file-uploader/jquery.ui.widget.js",
+          	"src/assets/plugins/fancy-file-uploader/jquery.fileupload.js",
+	          "src/assets/plugins/fancy-file-uploader/jquery.iframe-transport.js",
+	          "src/assets/plugins/fancy-file-uploader/jquery.fancy-fileupload.js",
+	          "src/assets/plugins/Drag-And-Drop/dist/imageuploadify.min.js",          
 	           "src/assets/js/app.js",
 	           "src/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js",
              "src/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js",              
-
-             "src/assets/js/pace.min.js"
+             "src/assets/js/pace.min.js",
+             "src/assets/plugins/select2/js/select2.min.js"
             ]
           },
           "configurations": {

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,8 +10,6 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { LoginComponent } from './user-authentication/login/login.component';
 import { ContactsComponent } from './shared/contacts/contacts.component';
 import { ForgetPasswordComponent } from './user-authentication/forget-password/forget-password.component';
-import { ProductFormComponent } from './master/product/components/product-form/product-form.component';
-import { ProductListComponent } from './master/product/components/product-list/product-list.component';
 import { CircleListComponent } from './master/circle/components/circle-list/circle-list.component';
 import { ZoneListComponent } from './master/zone/components/zone-list/zone-list.component';
 import { ZoneFormComponent } from './master/zone/components/zone-form/zone-form.component';
@@ -21,6 +20,14 @@ import { RoleListComponent } from './master/role/components/role-list/role-list.
 import { RoleFormComponent } from './master/role/components/role-form/role-form.component';
 import { CompanyFormComponent } from './master/company/components/company-form/company-form.component';
 import { CompanyListComponent } from './master/company/components/company-list/company-list.component';
+import { CompanyUploadComponent } from './master/company/components/company-upload/company-upload.component';
+import { VehicleFormComponent } from './master/vehicle/components/vehicle-form/vehicle-form.component';
+import { VehicleListComponent } from './master/vehicle/components/vehicle-list/vehicle-list.component';
+import { VehicleUploadComponent } from './master/vehicle/components/vehicle-upload/vehicle-upload.component';
+import { VehicleTypeFormComponent } from './master/vehicle-Type/components/vehicle-type-form/vehicle-type-form.component';
+
+import { UserListComponent } from './master/user/components/user-list/user-list.component';
+import { UserFormComponent } from './master/user/components/user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +38,6 @@ import { CompanyListComponent } from './master/company/components/company-list/c
     LoginComponent,
     ContactsComponent,
     ForgetPasswordComponent,
-    ProductFormComponent,
-    ProductListComponent,
     ZoneListComponent,
     ZoneFormComponent,
     CircleListComponent,
@@ -43,10 +48,19 @@ import { CompanyListComponent } from './master/company/components/company-list/c
     RoleFormComponent,
     CompanyFormComponent,
     CompanyListComponent,
+    CompanyUploadComponent,
+    VehicleFormComponent,
+    VehicleListComponent,
+    VehicleUploadComponent,
+    VehicleTypeFormComponent,
+    UserListComponent,
+    UserFormComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

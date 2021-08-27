@@ -12,32 +12,19 @@
     <!--navigation-->
     <ul class="metismenu mm-show" id="menu">
         <li class="mm-active">
-            <a href="javascript:;" class="has-arrow" aria-expanded="true">
-                <div class="parent-icon"><i class="bx bx-home-circle"></i>
-                </div>
-                <div class="menu-title">Dashboard</div>
-            </a>
-            <ul class="mm-show mm-collapse">
-                <li class="mm-active"> <a href="index.html" aria-expanded="true"><i class="bx bx-right-arrow-alt"></i>Default</a>
-                </li>
-                <li> <a href="dashboard-alternate.html"><i class="bx bx-right-arrow-alt"></i>Alternate</a>
-                </li>
-            </ul>
-        </li>
-        <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class="bx bx-category"></i>
+                <div class="parent-icon"><i class="bx bx-data"></i>
                 </div>
                 <div class="menu-title">Master</div>
             </a>
             <ul class="mm-collapse">  
-                <li> <a [routerLink]="['company']"><i class="bx bx-right-arrow-alt"></i>Customer Details</a>
-                    <li> <a [routerLink]="['Add-Update-Company']"><i class="bx bx-right-arrow-alt"></i>Add Customer </a>
+                <li> <a [routerLink]="['company']"><i class="bx bx-user-circle"></i>Customer Details</a></li>
+                <li> <a [routerLink]="['List-Vehicle']"><i class="bx bx-bus"></i>Vehicle Details</a></li>
                 <li> <a [routerLink]="['circle']"><i class="bx bx-right-arrow-alt"></i>Circle</a>
                 </li>
-                <li> <a [routerLink]="['zone-master']"><i class="bx bx-right-arrow-alt"></i>Zone</a>
+                <li> <a [routerLink]="['zone']"><i class="bx bx-bullseye"></i>Zone</a>
                 </li>
-                <li> <a [routerLink]="['ward-master']"><i class="bx bx-right-arrow-alt"></i>Ward</a>
+                <li> <a [routerLink]="['ward']"><i class="bx bx-current-location"></i>Ward</a>
                 </li>
                 <li> <a href="app-contact-list.html"><i class="bx bx-right-arrow-alt"></i>Sector</a>
                 </li>
@@ -52,23 +39,19 @@
 
         <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class="bx bx-category"></i>
+                <div class="parent-icon"><i class="bx bx-user-circle"></i>
                 </div>
                 <div class="menu-title">User Management</div>
             </a>
             <ul class="mm-collapse">  
                 <li> <a [routerLink]="['role']"><i class="bx bx-right-arrow-alt"></i>Role</a>
+                </li> 
+                <li> <a [routerLink]="['user']"><i class="bx bx-right-arrow-alt"></i>User</a>
                 </li>              
             </ul>
         </li>
         <li class="menu-label">UI Elements</li>
-        <li>
-            <a [routerLink]="['product']">
-                <div class="parent-icon"><i class="bx bx-cookie"></i>
-                </div>
-                <div class="menu-title">abcdgfs</div>
-            </a>
-        </li>
+       
         <li>
             <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bx bx-cart"></i>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,15 +6,32 @@ import { Router } from '@angular/router';
   templateUrl: './zone-list.component.html',
   styleUrls: ['./zone-list.component.css']
 })
-export class ZoneListComponent implements OnInit {
+export class ZoneListComponent implements OnInit, AfterViewInit {
 
   constructor(private router:Router) { }
 
-  ngOnInit(): void {
+  @ViewChild('example5') table;
+  dataTable: any;
+  dtOptions: any;
+  ngOnInit(): void {    
   }
 
-  addZoneForm(){
-    this.router.navigateByUrl('/login/header/zone-form')
+  ngAfterViewInit(){   
+    this.dtOptions = {
+      dom: 'Bfrtip',
+      buttons: [
+          'copyHtml5',
+          'excelHtml5',
+          'csvHtml5',
+          'pdfHtml5'
+      ]     
+  };
+    this.dataTable = $(this.table.nativeElement);
+    this.dataTable.DataTable(this.dtOptions);    
+  }
+
+  addUpdate(){    
+    this.router.navigateByUrl('/login/header/add-update-zone')
   }
 
 }

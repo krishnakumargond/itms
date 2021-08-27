@@ -1,14 +1,15 @@
+
+        
 <div class="page-wrapper">
     <div class="page-content">
-        
-		<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
             <div class="breadcrumb-title pe-3">Master</div>
             <div class="ps-3">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0 p-0">
                         <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Customer Details</li>
+                        <li class="breadcrumb-item active" aria-current="page">Vehicle Details </li>
                     </ol>
                 </nav>
             </div>           
@@ -19,10 +20,10 @@
             <div class="card-body">
                 <div class="row align-items-center">
                     <div class="col-sm-2">
-                        <a href="javascript:void(0)" (click)="addUpdateCompany()" class="btn btn-primary px-2"><i
+                        <a href="javascript:void(0)" (click)="addUpdateVehicle()" class="btn btn-primary px-2"><i
                                 class="bx bxs-plus-square"></i>Add New</a>
                     &nbsp;
-                        <a href="javascript:void(0)" (click)="UploadCompany()" class="btn btn-primary px-2"><i class="bx bx-cloud-download" ></i></a>
+                        <a href="javascript:void(0)" (click)="UploadCompanyVehicle ()" class="btn btn-primary px-2"><i class="bx bx-cloud-download" ></i></a>
                     </div>
                 </div>
                 <br />
@@ -32,21 +33,21 @@
 							<table #example3 class="table table-striped table-bordered">
 								<thead>
 									<tr>
-										<th>Customer Name</th>
-										<th>Website</th>
-										<th>Primary Email</th>
-										<th>Primary Phone</th>
-										
+										<th>Vehicle No</th>
+										<th>Vehicle Type</th>
+										<th>Chasis No</th>
+										<th>Serial No</th>
+										<th>Status</th>
 										<th>Action</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td>Antony Maintaince Services</td>
-										<td>http://www.artspl.com</td>
-										<td>ams@artspl.com</td>
+										<td>BR01GJ-1288</td>
+										<td>407-EX</td>
+										<td>234567</td>
 										<td>9582051356</td>
-										
+										<td><div class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3"><i class='bx bxs-circle me-1'></i>Active</div></td>
 										<td><div class="d-flex order-actions">
                                             
                                             <a href="#" class=""><i class="bx bxs-edit"></i></a>
@@ -57,11 +58,11 @@
 								</tbody>
 								<tfoot>
                                     <tr>
-									<th>Customer Name</th>
-										<th>Website</th>
-										<th>Primary Email</th>
-										<th>Primary Phone</th>
-										
+										<th>Vehicle No</th>
+										<th>Vehicle Type</th>
+										<th>Chasis No</th>
+										<th>Serial No</th>
+										<th>Status</th>
 										<th>Action</th>
                                     </tr>
 								</tfoot>

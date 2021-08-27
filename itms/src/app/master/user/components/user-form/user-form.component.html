@@ -1,0 +1,118 @@
+<div class="page-wrapper">
+    <div class="page-content">
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+            <div class="breadcrumb-title pe-3">Master</div>
+            <div class="ps-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0 p-0">
+                        <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">User</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+<h6 class="mb-0 text-uppercase">User</h6>
+<hr>
+<div class="card border-top border-0 border-4 border-danger">
+    <div class="card-body p-5">
+        <div class="card-title d-flex align-items-center">
+            <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
+            </div>
+            <div class="col-sm-6">
+                <h5 class="mb-0 text-danger">Add/Update User</h5>
+            </div>                   
+            <!-- <div class="modal-footer  align-items-right">
+                <button type="button" class="btn btn-primary" [disabled]="!formValue.valid">Submit</button>
+                <button type="button" class="btn btn-danger">Cancel</button>
+            </div> -->
+           
+            <div class="ms-auto">
+                <div class="col-12">
+               
+            <button type="submit"  [disabled]="!formValue.valid" class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
+        </div>
+        </div>
+        </div>
+       
+        <hr>
+        <form class="row g-3" [formGroup]="formValue"> 
+            <div class="col-md-6">
+                <label for="inputLastName1" class="form-label">User Name<span class="text-danger">*</span></label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-user-circle"></i></span>
+                    <input type="text" class="form-control border-start-0" id="UserName" placeholder="Enter User Name" formControlName="userName">
+                </div>
+                <p *ngIf="formValue.get('userName').hasError('required') && formValue.get('userName').touched" class="text-danger">User name is required*</p>
+                <p *ngIf="formValue.get('userName').hasError('minlength') && formValue.get('userName').touched" class="text-danger">User name should contain atleast 3 characters*</p>
+                <p *ngIf="formValue.get('userName').hasError('maxlength') && formValue.get('userName').touched" class="text-danger">User name should not contain more than 255 characters*</p>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Employee <span class="text-danger">*</span></label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-user-check"></i></span>
+                <select #dropdown4 class="single-select form-control" formControlName="employee">
+                    <option value="" disabled selected>Select Employee</option>
+                    <option value="United States">United States</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Aland Islands">Aland Islands</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                </select>
+                </div>
+            </div>  
+            
+            <div class="col-md-6">
+                <label class="form-label">Role<span class="text-danger">*</span></label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-briefcase-alt"></i></span>
+                <select #dropdown5 class="single-select form-control" formControlName="role">
+                    <option value="" disabled selected>Select Role</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Aland Islands">Aland Islands</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                </select>
+                </div>
+            </div> 
+            <div class="col-md-6">
+                <label for="inputLastName1" class="form-label">Mobile No<span class="text-danger">*</span></label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-mobile-alt"></i></span>
+                    <input type="text" class="form-control border-start-0" id="UserName" placeholder="Enter Mobile" formControlName="mobile">
+                </div>
+                <p *ngIf="formValue.get('mobile').hasError('required') && formValue.get('mobile').touched" class="text-danger">Mobile Number is required*</p>
+            </div> 
+            <div class="col-md-6">
+                <label for="inputLastName1" class="form-label">Password<span class="text-danger">*</span></label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-lock"></i></span>
+                    <input type="text" class="form-control border-start-0" id="UserName" placeholder="Enter Password" formControlName="password">
+                </div>
+                <p *ngIf="formValue.get('password').hasError('pattern') && formValue.get('password').touched" class="text-danger">password should contain atleast a uppercase letter,a lowercase letter, a special character and should be atleast 8 characters long*</p>
+            </div> 
+            <div class="col-md-6">
+                <label for="loginID" class="form-label">Login ID<span class="text-danger">*</span></label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-user"></i></span>
+                    <input type="text" class="form-control border-start-0" id="loginID" placeholder="Enter Login Id" formControlName="loginID">
+                </div>
+                <p *ngIf="formValue.get('loginID').hasError('required') && formValue.get('loginID').touched" class="text-danger">Login ID is required*</p>
+            </div> 
+            <div class="col-md-6">
+                <label for="status" class="form-label mt-3">Status<span class="text-danger">*</span></label>
+                    <div class="input-group">
+                    <input class="form-check-input" type="checkbox" id="status" formControlName="status">
+                    &nbsp;&nbsp;<label class="form-check-label" for="status">is Active</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="remark" class="form-label">Remark</label>
+                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-message-add"></i></span>
+                    <input type="text" class="form-control border-start-0" id="remark" placeholder="Add Remark" formControlName="remark">
+                </div>
+            </div> 
+           
+           
+        </form>
+    </div>
+</div>
+</div>
+</div>
