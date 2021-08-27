@@ -29,6 +29,12 @@ import { VehicleTypeFormComponent } from './master/vehicle-Type/components/vehic
 import { UserListComponent } from './master/user/components/user-list/user-list.component';
 import { UserFormComponent } from './master/user/components/user-form/user-form.component';
 
+import { AreaListComponent } from './master/area/components/area-list/area-list.component';
+import { AreaFormComponent } from './master/area/components/area-form/area-form.component';
+import { SectorFormComponent } from './master/sector/components/sector-form/sector-form.component';
+import { SectorListComponent } from './master/sector/components/sector-list/sector-list.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,    
@@ -55,6 +61,11 @@ import { UserFormComponent } from './master/user/components/user-form/user-form.
     VehicleTypeFormComponent,
     UserListComponent,
     UserFormComponent,
+ 
+    AreaFormComponent,
+    AreaListComponent,
+    SectorFormComponent,
+    SectorListComponent,
   ],
   imports: [
     BrowserModule,
