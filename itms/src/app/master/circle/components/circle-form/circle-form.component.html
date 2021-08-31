@@ -1,50 +1,101 @@
 <div class="page-wrapper">
     <div class="page-content">
-        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-            <div class="breadcrumb-title pe-3">Master</div>
-            <div class="ps-3">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb mb-0 p-0">
-                        <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page">Circle</li>
-                    </ol>
-                </nav>
-            </div>           
+        <div class="row">
+            <div class="col-xl-12 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="p-4 border rounded">
+                            <form class="row g-3 needs-validation" novalidate id="circleform" >
+                                <div class="card-title d-flex align-items-center">
+                                    <div>
+                                        <i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h5 class="mb-0 text-danger">Add/Update Circle</h5>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <div class="col-12">
+    
+    
+                                            <button type="submit" class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>
+                                            &nbsp;
+                                            <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="col-md-6">
+                                    <label for="CicrleName" class="form-label">Cicrle Name</label>
+                                    <div class="input-group has-validation">
+                                        <span class="input-group-text bg-transparent">
+                                            <i class="fadeIn animated bx bx-bullseye"></i>
+                                        </span>
+                                        <input type="text" pattern=".{1,180}"  class="form-control" id="CicrleName" name="CicrleName" aria-describedby="inputGroupPrepend"  required>
+                                        <div class="invalid-feedback">Cicrle Name should be a minimum of 1 characters and maximum of 180 characters</div>
+                                        <div class="valid-feedback">Looks good!</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="ShortName" class="form-label">Short Name</label>
+                                    <div class="input-group has-validation">
+                                        <span class="input-group-text bg-transparent">
+                                            <i class="fadeIn animated bx bx-text"></i>
+                                        </span>
+                                        <input type="text" pattern=".{1,50}" class="form-control" id="ShortName" name="ShortName" aria-describedby="inputGroupPrepend"  required>
+                                        <div class="invalid-feedback">Short Name should be a minimum of 1 characters and maximum of 50 characters</div>
+                                        <div class="valid-feedback">Looks good!</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <label for="DateOfCommission" class="form-label">Date Of Commission</label>
+                                    <div class="input-group has-validation">
+                                        <span class="input-group-text bg-transparent">
+                                            <i class="fadeIn animated bx bx-calendar-week "></i>
+                                        </span>                                        
+                                        <input type="text"  class=" result form-control" id="DateOfCommission" name="DateOfCommission" aria-describedby="inputGroupPrepend" #DateOfCommission  required>
+                                        <div class="invalid-feedback">Please Select Date Of Commission!</div>
+                                        <div class="valid-feedback">Looks good!</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="CompanyCode" class="form-label">Select Company</label>
+                                    <div class="input-group has-validation">
+                                        <span class="input-group-text bg-transparent">
+                                            <i class="fadeIn animated bx bx-text"></i>
+                                        </span>
+                                        <select class="single-select form-control" #CompanyCode id="CompanyCode" name="CompanyCode" aria-describedby="inputGroupPrepend"  required></select>                                        
+                                        <div class="invalid-feedback">Please Select Company!</div>
+                                        <div class="valid-feedback">Looks good!</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <label for="remark" class="form-label">Remark</label>
+                                    <div class="input-group has-validation">
+                                        <span class="input-group-text bg-transparent">
+                                            <i class="fadeIn animated bx bx-text"></i>
+                                        </span>
+                                        <input type="text" pattern=".{0,100}" class="form-control" id="remark" aria-describedby="inputGroupPrepend"  >
+                                        <div class="invalid-feedback">Remark should not be maximum of 100 characters</div>
+                                        <div class="valid-feedback">Looks good!</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="status" class="form-label">Status</label>
+                                    <div class="input-group ">
+                                        <input type="checkbox" id="status" aria-describedby="inputGroupPrepend">
+                                        <label class="form-check-label" for="invalidCheck">&nbsp;&nbsp;isActive</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-<hr>
-<div class="card border-top border-0 border-4 border-danger">
-    <div class="card-body p-5">
-        <div class="card-title d-flex align-items-center">
-            <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
-            </div>
-            <h5 class="mb-0 text-danger">Add/Update Circle</h5>
-        </div>
-        <hr>
-        <form class="row g-3">          
-            <div class="col-md-6">
-                <label for="CircleName" class="form-label">Circle Name</label>
-                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-text"></i></span>
-                    <input type="text" class="form-control border-start-0" name="CircleName" id="CircleName" placeholder="Circle Name">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label for="CircleShortName" class="form-label">Circle Short Name</label>
-                <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-text"></i></span>
-                    <input type="text" class="form-control border-start-0" id="CircleShortName" name="CircleShortName" placeholder="Circle Short Name">
-                </div>
-            </div>            
-            <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="IsActive">
-                    <label class="form-check-label" for="IsActive">Is Active</label>
-                </div>
-            </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-danger px-5">Submit</button>
-            </div>
-        </form>
+        <!--end row-->
     </div>
-</div>
-</div>
 </div>

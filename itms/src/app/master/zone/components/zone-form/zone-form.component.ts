@@ -26,7 +26,8 @@ formValue:FormGroup;
         Validators.minLength(2),
         Validators.maxLength(5)
       ]),
-      status:new FormControl(false)
+      status:new FormControl(false),
+      remark:new FormControl('')
     })
   }
 
@@ -39,6 +40,11 @@ formValue:FormGroup;
 			placeholder: $(this).data('placeholder'),
 			allowClear: Boolean($(this).data('allow-clear')),
 		});
+  }
+
+  submitData(){
+    console.log('test')
+    console.log(this.formValue.value);
   }
 
 }
