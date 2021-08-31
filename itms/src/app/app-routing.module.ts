@@ -20,6 +20,14 @@ import { VehicleFormComponent } from './master/vehicle/components/vehicle-form/v
 import { VehicleUploadComponent } from './master/vehicle/components/vehicle-upload/vehicle-upload.component';
 import { UserListComponent } from './master/user/components/user-list/user-list.component';
 import { UserFormComponent } from './master/user/components/user-form/user-form.component';
+import {AreaFormComponent} from './master/area/components/area-form/area-form.component';
+import { AreaListComponent } from './master/area/components/area-list/area-list.component';
+
+import { SectorFormComponent } from './master/sector/components/sector-form/sector-form.component';
+import { SectorListComponent } from './master/sector/components/sector-list/sector-list.component';
+
+import { VehicletypeFormComponent } from './master/vehicletype/components/vehicletype-form/vehicletype-form.component';
+import { VehicletypeListComponent } from './master/vehicletype/components/vehicletype-list/vehicletype-list.component';
 
 const routes: Routes = [
   {path:'login/header', component:HeaderComponent, 
@@ -41,7 +49,14 @@ const routes: Routes = [
       {path:'Add-Update-Vehicle', component:VehicleFormComponent},
       {path:'Add-Upload-Vehicle', component:VehicleUploadComponent},
       {path:'user',component:UserListComponent},
-      {path:'add-update-user', component:UserFormComponent}
+      {path:'add-update-user', component:UserFormComponent},
+      {path:'app-area-list', component:AreaListComponent},
+      {path:'app-area-form', component:AreaFormComponent},
+      {path:'app-sector-list', component:SectorListComponent},
+      {path:'app-sector-form', component:SectorFormComponent},
+      {path:'app-vehicletype-list', component:VehicletypeListComponent},
+      {path:'app-vehicletype-form', component:VehicletypeFormComponent}
+    
     ]
 },
   {path:'login', component:LoginComponent},
