@@ -24,7 +24,7 @@ import { CompanyUploadComponent } from './master/company/components/company-uplo
 import { VehicleFormComponent } from './master/vehicle/components/vehicle-form/vehicle-form.component';
 import { VehicleListComponent } from './master/vehicle/components/vehicle-list/vehicle-list.component';
 import { VehicleUploadComponent } from './master/vehicle/components/vehicle-upload/vehicle-upload.component';
-import { VehicleTypeFormComponent } from './master/vehicle-Type/components/vehicle-type-form/vehicle-type-form.component';
+
 
 import { UserListComponent } from './master/user/components/user-list/user-list.component';
 import { UserFormComponent } from './master/user/components/user-form/user-form.component';
@@ -35,6 +35,20 @@ import { SectorFormComponent } from './master/sector/components/sector-form/sect
 import { SectorListComponent } from './master/sector/components/sector-list/sector-list.component';
 import { VehicletypeFormComponent } from './master/vehicletype/components/vehicletype-form/vehicletype-form.component';
 import { VehicletypeListComponent } from './master/vehicletype/components/vehicletype-list/vehicletype-list.component';
+
+import { EmployeeListComponent } from './master/employee/components/employee-list/employee-list.component';
+import { RegistrationComponent } from './master/employee/components/employee-form/registration/registration.component';
+import { PayrollDetailsComponent } from './master/employee/components/employee-form/payroll-details/payroll-details.component';
+import { PersonalDetailsComponent } from './master/employee/components/employee-form/personal-details/personal-details.component';
+import { ProofDetailsComponent } from './master/employee/components/employee-form/proof-details/proof-details.component';
+import { FamilyDetailsComponent } from './master/employee/components/employee-form/family-details/family-details.component';
+import { EducationDetailsComponent } from './master/employee/components/employee-form/education-details/education-details.component';
+import { ReferenceDetailsComponent } from './master/employee/components/employee-form/reference-details/reference-details.component';
+import { ExperienceDetailsComponent } from './master/employee/components/employee-form/experience-details/experience-details.component';
+import { DepartmentFormComponent } from './master/department/components/department-form/department-form.component';
+import { DesignationFormComponent } from './master/designation/components/designation-form/designation-form.component';
+import { PreRegistrationFormComponent } from './master/pre-registration/components/pre-registration-form/pre-registration-form.component';
+
 
 
 @NgModule({
@@ -60,7 +74,7 @@ import { VehicletypeListComponent } from './master/vehicletype/components/vehicl
     VehicleFormComponent,
     VehicleListComponent,
     VehicleUploadComponent,
-    VehicleTypeFormComponent,
+
     UserListComponent,
     UserFormComponent,
  
@@ -70,6 +84,20 @@ import { VehicletypeListComponent } from './master/vehicletype/components/vehicl
     SectorListComponent,
     VehicletypeFormComponent,
     VehicletypeListComponent,
+   
+    EmployeeListComponent,
+    RegistrationComponent,
+    PayrollDetailsComponent,
+    PersonalDetailsComponent,
+    ProofDetailsComponent,
+    FamilyDetailsComponent,
+    EducationDetailsComponent,
+    ReferenceDetailsComponent,
+    ExperienceDetailsComponent,
+    DepartmentFormComponent,
+    DesignationFormComponent,
+    PreRegistrationFormComponent,
+  
   ],
   imports: [
     BrowserModule,

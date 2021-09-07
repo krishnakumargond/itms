@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+
 
 @Component({
   selector: 'app-vehicletype-form',
@@ -8,29 +8,53 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class VehicletypeFormComponent implements OnInit , AfterViewInit {
 
-  @ViewChild('dropdown') list;
-
-  zoneList:any;
-  formValue:FormGroup;
-    constructor(private formBuilder : FormBuilder) { }
-  
-    ngOnInit(): void {
-      this.formValue = this.formBuilder.group({
-        vehicleType:new FormControl(''),
-        
-        status:new FormControl(false),
-        remark:new FormControl('') 
-      })
-    }
-  
-    ngAfterViewInit(){
-      this.zoneList = $(this.list.nativeElement);
-      this.zoneList.select2({
-        theme: 'bootstrap4',
-        width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
-        placeholder: $(this).data('placeholder'),
-        allowClear: Boolean($(this).data('allow-clear')),
-      });
-    }
+  constructor() { 
+    
   }
-  
+
+@ViewChild("CompanyCode") CompanyCode;
+@ViewChild("vehicleType") vehicleType;
+
+
+
+CCode:any;
+Select_VehicleType: any;
+  ngOnInit(): void {
+  }
+  ngAfterViewInit(){   
+   
+    this.CCode=$(this.CompanyCode.nativeElement);  
+    this.Select_VehicleType= $(this.vehicleType.nativeElement);  
+   
+    this.CCode.select2({
+			theme: 'bootstrap4',
+			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+			placeholder: $(this).data('placeholder'),
+			allowClear: Boolean($(this).data('allow-clear')),
+		});
+
+    this.Select_VehicleType.select2({
+			theme: 'bootstrap4',
+			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+			placeholder: $(this).data('placeholder'),
+			allowClear: Boolean($(this).data('allow-clear')),
+		});
+    
+
+
+    
+    let forms: NodeListOf<Element> = document.querySelectorAll(".needs-validation");    
+    Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+        form.addEventListener('submit', function (event) {          
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+        }, false)
+    })
+  }
+
+}

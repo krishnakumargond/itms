@@ -1,0 +1,279 @@
+<div class="page-wrapper">
+    <div class="page-content">
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+            <div class="breadcrumb-title pe-3">Master</div>
+            <div class="ps-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0 p-0">
+                        <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Employee</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <h6 class="mb-0 text-uppercase">Employee Registration</h6>
+        <hr>
+        <div class="card border-top border-0 border-4 border-danger">
+            <div class="card-body p-5">
+                <div class="card-title d-flex align-items-center">
+                    <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
+                    </div>
+                    <div class="col-sm-6">
+                        <h5 class="mb-0 text-danger">Add Employee </h5>
+                    </div>                   
+                    <!-- <div class="  align-items-right">
+                        <button type="button" class="btn btn-primary" [disabled]="!formValue.valid">Submit</button>
+                        <button type="button" class="btn btn-danger">Cancel</button>
+                    </div> -->
+                    <div class="ms-auto">
+                        <div class="col-12">
+                       
+                      
+                    <button type="button" class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>
+                    &nbsp;
+                    <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
+                </div>
+                </div>
+                </div>
+
+                <hr>
+                <form class="row g-3" >
+                    <div class="col-md-6">
+                        <label for="sectorName" class="form-label">Employee Code[*]:<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <input type="text" class="form-control border-start-0" id="sectorName"
+                                placeholder="Enter Employee Code" formControlName="sectorName" autocomplete="off">
+                        </div>
+                        <!-- <p *ngIf="formValue.get('sectorName').hasError('required') && formValue.get('sectorName').touched"
+                            class="text-danger">Sector name is required*</p>
+                        <p *ngIf="formValue.get('sectorName').hasError('minlength') && formValue.get('sectorName').touched"
+                            class="text-danger">Sector name should contain atleast 5 characters*</p>
+                        <p *ngIf="formValue.get('sectorName').hasError('maxlength') && formValue.get('sectorName').touched"
+                            class="text-danger">Sector name should not contain more than 15 characters*</p> -->
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Salutation<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <select #dropdown class="single-select form-control" formControlName="selectWard">
+                                
+                                <option selected="selected" value="1">Mr.</option>
+                                <option selected="selected" value="1">Mrs.</option>
+                            </select>
+                        </div>
+                    </div>
+                  
+                    <br /><br /><br /><br />
+
+                    <div class="col-md-6">
+                        <label for="sectorShortName" class="form-label">First Name[*]:<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <input type="text" class="form-control border-start-0" id="sectorShortName"
+                                placeholder="Enter First Name" formControlName="sectorShortName" required
+                                autocomplete="off">
+                        </div>
+                        <!-- <p *ngIf="formValue.  get('sectorShortName').hasError('required') && formValue.get('sectorShortName').touched"
+                            class="text-danger">Sector short name is required*</p>
+                        <p *ngIf="formValue.get('sectorShortName').hasError('minlength') && formValue.get('sectorShortName').touched"
+                            class="text-danger">Sector short name should contain atleast 2 characters*</p>
+                        <p *ngIf="formValue.get('sectorShortName').hasError('maxlength') && formValue.get('sectorShortName').touched"
+                            class="text-danger">Sector short name should not contain more than 5 characters*</p> -->
+                    </div>
+                    <div class="col-md-6">
+                        <label for="sectorShortName" class="form-label">Middle Name:<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <input type="text" class="form-control border-start-0" id="sectorShortName"
+                                placeholder="Enter Middle Name" formControlName="sectorShortName" required
+                                autocomplete="off">
+                        </div>
+                       
+                    </div>
+                    <div class="col-md-6">
+                        <label for="sectorShortName" class="form-label">Last Name:<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <input type="text" class="form-control border-start-0" id="sectorShortName"
+                                placeholder="Enter Last Name" formControlName="sectorShortName" required
+                                autocomplete="off">
+                        </div>
+                    
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Department<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <select #dropdown class="single-select form-control" formControlName="selectWard">
+                               
+                                <option value="1">HR</option>
+		                        <option value="2">ADMIN</option>
+		                        <option value="3">ACCOUNT</option>
+		                         <option value="4">STORES AND PURCHASES</option>
+		                        <option value="5">OPERATION</option>
+		                        <option value="6">TECHNICAL AND WORKSHOP</option>
+		                       <option value="7">SECURITIES</option>
+		                      <option value="9">DRIVERS</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Designation<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <select #dropdown class="single-select form-control" formControlName="selectWard">
+                               
+                                <option value="1">HR</option>
+		                        <option value="2">ADMIN</option>
+		                        <option value="3">ACCOUNT</option>
+		                         <option value="4">STORES AND PURCHASES</option>
+		                        <option value="5">OPERATION</option>
+		                        <option value="6">TECHNICAL AND WORKSHOP</option>
+		                       <option value="7">SECURITIES</option>
+		                      <option value="9">DRIVERS</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Employee Type<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <select #dropdown class="single-select form-control" formControlName="selectWard">
+                               
+                                <option value="1">Permanent</option>
+                                <option value="2">Temporary</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <label for="sectorShortName" class="form-label">Father Name[*]<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <input type="text" class="form-control border-start-0" id="sectorShortName"
+                                placeholder="Enter Father Name" formControlName="sectorShortName" required
+                                autocomplete="off">
+                        </div>
+                    
+                    </div>
+                   
+                    <div class="col-md-6">
+                        <label for="sectorShortName" class="form-label">Date Of Birth[*]<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                                    <input type="date" class="form-control border-start-0" placeholder="dd-mm-yyyy" value=""
+                                    min="1997-01-01" max="2030-12-31" id="FromDate"
+                                         formControlName="FromDate" required
+                                        autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Country of Birth<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <select #dropdown class="single-select form-control" formControlName="selectWard">
+                               
+                                <option value="1">HR</option>
+		                        <option value="2">ADMIN</option>
+		                        <option value="3">ACCOUNT</option>
+		                         <option value="4">STORES AND PURCHASES</option>
+		                        <option value="5">OPERATION</option>
+		                        <option value="6">TECHNICAL AND WORKSHOP</option>
+		                       <option value="7">SECURITIES</option>
+		                      <option value="9">DRIVERS</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">City of Birth<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <select #dropdown class="single-select form-control" formControlName="selectWard">
+                               
+                                <option value="1">HR</option>
+		                        <option value="2">ADMIN</option>
+		                        <option value="3">ACCOUNT</option>
+		                         <option value="4">STORES AND PURCHASES</option>
+		                        <option value="5">OPERATION</option>
+		                        <option value="6">TECHNICAL AND WORKSHOP</option>
+		                       <option value="7">SECURITIES</option>
+		                      <option value="9">DRIVERS</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">State of Birth<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <select #dropdown class="single-select form-control" formControlName="selectWard">
+                               
+                                <option value="1">HR</option>
+		                        <option value="2">ADMIN</option>
+		                        <option value="3">ACCOUNT</option>
+		                         <option value="4">STORES AND PURCHASES</option>
+		                        <option value="5">OPERATION</option>
+		                        <option value="6">TECHNICAL AND WORKSHOP</option>
+		                       <option value="7">SECURITIES</option>
+		                      <option value="9">DRIVERS</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="remark" class="form-label">Date of Joining</label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-message-add"></i></span>
+                            <input type="date" class="form-control border-start-0" placeholder="dd-mm-yyyy" value=""
+                            min="1997-01-01" max="2030-12-31" id="FromDate"
+                                 formControlName="FromDate" required
+                                autocomplete="off">
+                        </div>
+                    </div> 
+                    
+                    <div class="col-md-6">
+                        <label for="Martial Status" class="form-label">Martial Status</label>
+                        <td><input id="Martial_Status" type="radio" name="Martial_Status" value="UnMarried" checked="checked"> &nbsp;<label for="Martial_Status">UnMarried</label></td><td>
+                            &nbsp; <input id="Martial_Status" type="radio" name="Martial_Status" value="Married">&nbsp;<label for="Martial_Status">Married</label></td>
+                    </div> 
+
+                    <div class="col-md-6">
+                        <label for="Martial Status" class="form-label">Gender</label>
+                        <td><input id="Martial_Status" type="radio" name="Martial_Status" value="Male" checked="checked"> &nbsp;<label for="Martial_Status">Male</label></td> 
+                       <td> &nbsp;<input id="Martial_Status" type="radio" name="Martial_Status" value="Female">&nbsp;<label for="Martial_Status">Female</label></td>
+                    </div> 
+
+
+
+                    
+
+                    <div class="col-md-6">
+                        <label for="isActiveCheckBox" class="form-label mt-3">Status<span class="text-danger" >*</span></label>
+                        <div class="input-group">
+                            <input class="form-check-input" type="checkbox" id="isActiveCheckBox"
+                                formControlName="status">
+                            &nbsp;&nbsp;<label class="form-check-label" for="isActiveCheckBox">is Active</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="remark" class="form-label">Resigned Date</label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-message-add"></i></span>
+                            <input type="date" class="form-control border-start-0" placeholder="dd-mm-yyyy" value=""
+                                    min="1997-01-01" max="2030-12-31" id="FromDate"
+                                         formControlName="FromDate" required
+                                        autocomplete="off">
+                        </div>
+                    </div> 
+                    
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

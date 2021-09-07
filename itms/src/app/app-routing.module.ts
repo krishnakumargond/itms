@@ -29,6 +29,18 @@ import { SectorListComponent } from './master/sector/components/sector-list/sect
 import { VehicletypeFormComponent } from './master/vehicletype/components/vehicletype-form/vehicletype-form.component';
 import { VehicletypeListComponent } from './master/vehicletype/components/vehicletype-list/vehicletype-list.component';
 
+import { RegistrationComponent } from './master/employee/components/employee-form/registration/registration.component';
+import { EmployeeListComponent } from './master/employee/components/employee-list/employee-list.component';
+import { PayrollDetailsComponent } from './master/employee/components/employee-form/payroll-details/payroll-details.component';
+import { ProofDetailsComponent } from './master/employee/components/employee-form/proof-details/proof-details.component';
+import { FamilyDetailsComponent } from './master/employee/components/employee-form/family-details/family-details.component';
+import { EducationDetailsComponent } from './master/employee/components/employee-form/education-details/education-details.component';
+import { ExperienceDetailsComponent } from './master/employee/components/employee-form/experience-details/experience-details.component';
+import { ReferenceDetailsComponent } from './master/employee/components/employee-form/reference-details/reference-details.component';
+import { PersonalDetailsComponent } from './master/employee/components/employee-form/personal-details/personal-details.component';
+import { DepartmentFormComponent } from './master/department/components/department-form/department-form.component';
+import { DesignationFormComponent } from './master/designation/components/designation-form/designation-form.component';
+import { PreRegistrationFormComponent } from './master/pre-registration/components/pre-registration-form/pre-registration-form.component';
 const routes: Routes = [
   {path:'login/header', component:HeaderComponent, 
     children:[
@@ -55,9 +67,23 @@ const routes: Routes = [
       {path:'app-sector-list', component:SectorListComponent},
       {path:'app-sector-form', component:SectorFormComponent},
       {path:'app-vehicletype-list', component:VehicletypeListComponent},
-      {path:'app-vehicletype-form', component:VehicletypeFormComponent}
+      {path:'app-vehicletype-form', component:VehicletypeFormComponent},
+      {path:'app-employee-list', component:EmployeeListComponent},
+      {path:'app-registration', component: RegistrationComponent},
+      {path:'app-payroll-details', component: PayrollDetailsComponent},
+      {path:'app-proof-details', component: ProofDetailsComponent},
+      {path:'app-family-details', component: FamilyDetailsComponent},
+      {path:'app-education-details', component: EducationDetailsComponent},
+      {path:'app-experience-details', component: ExperienceDetailsComponent},
+      {path:'app-reference-details', component: ReferenceDetailsComponent},
+      {path:'app-personal-details', component: PersonalDetailsComponent},
+      {path:'app-department-form', component: DepartmentFormComponent},
+      {path:'app-designation-form', component: DesignationFormComponent},
+      {path:'app-pre-registration-form', component: PreRegistrationFormComponent}
     
     ]
+  
+    
 },
   {path:'login', component:LoginComponent},
   {path:'forget-password', component:ForgetPasswordComponent},

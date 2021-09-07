@@ -7,23 +7,22 @@
                     <ol class="breadcrumb mb-0 p-0">
                         <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Vehicle Type</li>
+                        <li class="breadcrumb-item active" aria-current="page">Department</li>
                     </ol>
                 </nav>
             </div>
         </div>
-        <h6 class="mb-0 text-uppercase">Vehicle Type</h6>
+        <h6 class="mb-0 text-uppercase">Department</h6>
         <hr>
         <div class="card border-top border-0 border-4 border-danger">
             <div class="card-body p-5">
-            
-                <form class="row g-3 needs-validation" novalidate id="vehicleTypeform">
-  
+               
+                <form class="row g-3 needs-validation" novalidate id="departmentform">
                     <div class="card-title d-flex align-items-center">
                         <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
                         </div>
                         <div class="col-sm-6">
-                            <h5 class="mb-0 text-danger">Add/Update Vehicle Type</h5>
+                            <h5 class="mb-0 text-danger">Add Department</h5>
                         </div>                   
                       
                         <div class="ms-auto">
@@ -40,23 +39,6 @@
                     <hr>
                     
                     <div class="col-md-6">
-                        <label for="vehicleType" class="form-label">Vehicle Type<span class="text-danger" >*</span></label>
-                        <div class="input-group has-validation">
-                            <span class="input-group-text bg-transparent">
-                                <i class="fadeIn animated bx bx-text"></i>
-                            </span>
-                            <select class="form-control single-select" #vehicleType id="vehicleType" name="vehicleType" aria-describedby="inputGroupPrepend"  required>
-                                <option value="" disabled selected>Select Vehicle Type</option>                                
-                                <option value="AC">AC</option>
-                                <option value="NON AC">NON AC</option>
-                            </select>                                        
-                            <div class="invalid-feedback">Please Select Vehicle Type!</div>
-                            <div class="valid-feedback">Looks good!</div>
-                            
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
                         <label for="CompanyCode" class="form-label">Select Company<span class="text-danger" >*</span></label>
                         <div class="input-group has-validation">
                             <span class="input-group-text bg-transparent">
@@ -71,9 +53,32 @@
                             
                         </div>
                     </div>
-               
+                 
+                    <div class="col-md-6">
+                        <label for="DepartmentName" class="form-label">Department  Name<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{1,180}"  class="form-control" id="DepartmentName" name="DepartmentName" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Department Name should be a minimum of 1 characters and maximum of 180 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div>
                     <br /><br /><br /><br />
 
+                    <div class="col-md-6">
+                        <label for="ShortName" class="form-label">Short Name<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <input type="text" pattern=".{1,50}" class="form-control" id="ShortName" name="ShortName" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Short Name should be a minimum of 1 characters and maximum of 50 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div>
+                   
                     <div class="col-md-6">
                         <label for="remark" class="form-label">Remark</label>
                         <div class="input-group has-validation">
@@ -92,7 +97,6 @@
                             <label class="form-check-label" for="invalidCheck">&nbsp;&nbsp;isActive</label>
                         </div>
                     </div>
-                   
                 </form>
             </div>
         </div>

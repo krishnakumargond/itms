@@ -1,31 +1,27 @@
-import {  Component, OnInit, ViewChild,AfterViewInit } from '@angular/core';
-
+import { Component, OnInit, ViewChild,AfterViewInit} from '@angular/core';
 
 @Component({
-  selector: 'app-sector-form',
-  templateUrl: './sector-form.component.html',
-  styleUrls: ['./sector-form.component.css']
+  selector: 'app-designation-form',
+  templateUrl: './designation-form.component.html',
+  styleUrls: ['./designation-form.component.css']
 })
-export class SectorFormComponent implements OnInit ,AfterViewInit {
+export class DesignationFormComponent implements OnInit, AfterViewInit {
 
-  
   constructor() { 
     
   }
 
 @ViewChild("CompanyCode") CompanyCode;
-@ViewChild("selectWard") selectWard;
+@ViewChild("selectdepartment") selectdepartment;
 
-
-DateComm: any;
 CCode:any;
-Select_Ward : any;
+Select_Department: any;
   ngOnInit(): void {
   }
   ngAfterViewInit(){   
    
     this.CCode=$(this.CompanyCode.nativeElement);  
-    this.Select_Ward= $(this.selectWard.nativeElement);  
+    this.Select_Department= $(this.selectdepartment.nativeElement);  
    
     this.CCode.select2({
 			theme: 'bootstrap4',
@@ -34,7 +30,7 @@ Select_Ward : any;
 			allowClear: Boolean($(this).data('allow-clear')),
 		});
 
-    this.Select_Ward.select2({
+    this.Select_Department.select2({
 			theme: 'bootstrap4',
 			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
 			placeholder: $(this).data('placeholder'),

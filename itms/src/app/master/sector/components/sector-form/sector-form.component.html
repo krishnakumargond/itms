@@ -16,89 +16,106 @@
         <hr>
         <div class="card border-top border-0 border-4 border-danger">
             <div class="card-body p-5">
-                <div class="card-title d-flex align-items-center">
-                    <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
-                    </div>
-                    <div class="col-sm-6">
-                        <h5 class="mb-0 text-danger">Add/Update Sector</h5>
-                    </div>                   
-                    <!-- <div class="  align-items-right">
-                        <button type="button" class="btn btn-primary" [disabled]="!formValue.valid">Submit</button>
-                        <button type="button" class="btn btn-danger">Cancel</button>
-                    </div> -->
-                    <div class="ms-auto">
-                        <div class="col-12">
-                       
-                      
-                    <button type="button" [disabled]="!formValue.valid" class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>
-                    &nbsp;
-                    <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
-                </div>
-                </div>
-                </div>
+               
+               
+                <form class="row g-3 needs-validation" novalidate id="sectorform">
 
-                <hr>
-                <form class="row g-3" [formGroup]='formValue'>
+                    <div class="card-title d-flex align-items-center">
+                        <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5 class="mb-0 text-danger">Add/Update Sector</h5>
+                        </div>                   
+                        <!-- <div class="  align-items-right">
+                            <button type="button" class="btn btn-primary" [disabled]="!formValue.valid">Submit</button>
+                            <button type="button" class="btn btn-danger">Cancel</button>
+                        </div> -->
+                        <div class="ms-auto">
+                            <div class="col-12">
+                           
+                          
+                        <button type="submit"  class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>
+                        &nbsp;
+                        <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
+                    </div>
+                    </div>
+                    </div>
+    
+                    <hr>
+
                     <div class="col-md-6">
-                        <label class="form-label">Sector<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                <option value="" disabled selected>Select Ward</option>
-                                <option value="United States">United States</option>
-                                <option value="United Kingdom">United Kingdom</option>
-                                <option value="Afghanistan">Afghanistan</option>
-                                <option value="Aland Islands">Aland Islands</option>
-                                <option value="Zambia">Zambia</option>
-                                <option value="Zimbabwe">Zimbabwe</option>
-                            </select>
+                        <label for="selectWard" class="form-label">Select Ward<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #selectWard id="selectWard" name="selectWard" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select Ward!</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <label for="CompanyCode" class="form-label">Select Company<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #CompanyCode id="CompanyCode" name="CompanyCode" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select Company!</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <label for="sectorName" class="form-label">Sector Name<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorName"
-                                placeholder="Enter Sector Name" formControlName="sectorName" autocomplete="off">
+                        <label for="SectorName" class="form-label">Sector Name<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{1,180}"  class="form-control" id="SectorName" name="SectorName" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Sector Name should be a minimum of 1 characters and maximum of 180 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
-                        <p *ngIf="formValue.get('sectorName').hasError('required') && formValue.get('sectorName').touched"
-                            class="text-danger">Sector name is required*</p>
-                        <p *ngIf="formValue.get('sectorName').hasError('minlength') && formValue.get('sectorName').touched"
-                            class="text-danger">Sector name should contain atleast 5 characters*</p>
-                        <p *ngIf="formValue.get('sectorName').hasError('maxlength') && formValue.get('sectorName').touched"
-                            class="text-danger">Sector name should not contain more than 15 characters*</p>
                     </div>
                     <br /><br /><br /><br />
 
+                 
                     <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Sector Short Name<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter Sector Short Name" formControlName="sectorShortName" required
-                                autocomplete="off">
+                        <label for="ShortName" class="form-label">Short Name<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <input type="text" pattern=".{1,50}" class="form-control" id="ShortName" name="ShortName" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Short Name should be a minimum of 1 characters and maximum of 50 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
-                        <p *ngIf="formValue.  get('sectorShortName').hasError('required') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name is required*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('minlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should contain atleast 2 characters*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('maxlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should not contain more than 5 characters*</p>
                     </div>
-                    
                     <div class="col-md-6">
                         <label for="remark" class="form-label">Remark</label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-message-add"></i></span>
-                            <input type="text" class="form-control border-start-0" id="remark" placeholder="Add Remark" formControlName="remark">
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <input type="text" pattern=".{0,100}" class="form-control" id="remark" aria-describedby="inputGroupPrepend"  >
+                            <div class="invalid-feedback">Remark should not be maximum of 100 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
-                    </div> 
-
+                    </div>
                     <div class="col-md-6">
-                        <label for="isActiveCheckBox" class="form-label mt-3">Status<span class="text-danger" >*</span></label>
-                        <div class="input-group">
-                            <input class="form-check-input" type="checkbox" id="isActiveCheckBox"
-                                formControlName="status">
-                            &nbsp;&nbsp;<label class="form-check-label" for="isActiveCheckBox">is Active</label>
+                        <label for="status" class="form-label">Status</label>
+                        <div class="input-group ">
+                            <input type="checkbox" id="status" aria-describedby="inputGroupPrepend">
+                            <label class="form-check-label" for="invalidCheck">&nbsp;&nbsp;isActive</label>
                         </div>
                     </div>
 

@@ -1,0 +1,306 @@
+<div class="page-wrapper">
+    <div class="page-content">
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+            <div class="breadcrumb-title pe-3">Master</div>
+            <div class="ps-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0 p-0">
+                        <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Employee</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <h6 class="mb-0 text-uppercase">Personal Details</h6>
+        <hr>
+        <div class="card border-top border-0 border-4 border-danger">
+            <div class="card-body p-5">
+                <div class="card-title d-flex align-items-center">
+                    <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
+                    </div>
+                    <div class="col-sm-6">
+                        <h5 class="mb-0 text-danger">PERSONAL DETAILS </h5>
+                    </div>                   
+                    <!-- <div class="  align-items-right">
+                        <button type="button" class="btn btn-primary" [disabled]="!formValue.valid">Submit</button>
+                        <button type="button" class="btn btn-danger">Cancel</button>
+                    </div> -->
+                    <div class="ms-auto">
+                        <div class="col-12">
+                       
+                      
+                    <button type="button" class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>
+                    &nbsp;
+                    <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
+                </div>
+                </div>
+                </div>
+
+                <hr>
+                <form class="row g-3" >
+                   
+                    
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="sectorShortName" class="form-label">Communication Address<span class="text-danger" >*</span></label>
+                                <input type="text" class="form-control border-start-0" id="sectorShortName"
+                                        placeholder="Line 1" formControlName="sectorShortName" required
+                                        autocomplete="off">
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="sectorShortName" class="form-label"><span class="text-danger" >*</span></label>
+                                <input type="text" class="form-control border-start-0" id="sectorShortName"
+                                        placeholder="Line 2" formControlName="sectorShortName" required
+                                        autocomplete="off">
+                            </div>
+                        </div>
+                     
+                    </div>
+
+                  
+                 
+
+                   
+                    <div class="col-md-6">
+                        <label class="form-label">Country<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <select #dropdown class="single-select form-control" formControlName="selectWard">
+                                
+                                <option selected="selected" value="1">IOC</option>
+                                <option selected="selected" value="1">ICIC</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">State<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <select #dropdown class="single-select form-control" formControlName="selectWard">
+                                
+                                <option selected="selected" value="1">IOC</option>
+                                <option selected="selected" value="1">ICIC</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">City<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <select #dropdown class="single-select form-control" formControlName="selectWard">
+                                
+                                <option selected="selected" value="1">IOC</option>
+                                <option selected="selected" value="1">ICIC</option>
+                            </select>
+                        </div>
+                    </div>
+                  
+                    <div class="col-md-6">
+                        <label for="sectorShortName" class="form-label">Pincode<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <input type="text" class="form-control border-start-0" id="Pincode"
+                                placeholder="Enter Pincode" formControlName="Pincode" required
+                                autocomplete="off">
+                        </div>
+                        <!-- <p *ngIf="formValue.  get('sectorShortName').hasError('required') && formValue.get('sectorShortName').touched"
+                            class="text-danger">Sector short name is required*</p>
+                        <p *ngIf="formValue.get('sectorShortName').hasError('minlength') && formValue.get('sectorShortName').touched"
+                            class="text-danger">Sector short name should contain atleast 2 characters*</p>
+                        <p *ngIf="formValue.get('sectorShortName').hasError('maxlength') && formValue.get('sectorShortName').touched"
+                            class="text-danger">Sector short name should not contain more than 5 characters*</p> -->
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <!-- <label for="isActiveCheckBox" class="form-label mt-3">Status<span class="text-danger" >*</span></label> -->
+                        <div class="input-group">
+                            <input class="form-check-input" type="checkbox" id="isActiveCheckBox"
+                                formControlName="status">
+                            &nbsp;&nbsp;<label class="form-check-label" for="isActiveCheckBox">Same As Communication Address</label>
+                        </div>
+                        </div>
+                    </div>
+                    
+                   
+
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="sectorShortName" class="form-label">Permanent Address<span class="text-danger" >*</span></label>
+                                <input type="text" class="form-control border-start-0" id="sectorShortName"
+                                        placeholder="Line 1" formControlName="sectorShortName" required
+                                        autocomplete="off">
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="sectorShortName" class="form-label"><span class="text-danger" >*</span></label>
+                                <input type="text" class="form-control border-start-0" id="sectorShortName"
+                                        placeholder="Line 2" formControlName="sectorShortName" required
+                                        autocomplete="off">
+                            </div>
+                        </div>
+                     
+                    </div>
+
+                     
+                    <div class="col-md-6">
+                        <label class="form-label">Country<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <select #dropdown class="single-select form-control" formControlName="selectWard">
+                                
+                                <option selected="selected" value="1">IOC</option>
+                                <option selected="selected" value="1">ICIC</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">State<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <select #dropdown class="single-select form-control" formControlName="selectWard">
+                                
+                                <option selected="selected" value="1">IOC</option>
+                                <option selected="selected" value="1">ICIC</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">City<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <select #dropdown class="single-select form-control" formControlName="selectWard">
+                                
+                                <option selected="selected" value="1">IOC</option>
+                                <option selected="selected" value="1">ICIC</option>
+                            </select>
+                        </div>
+                    </div>
+                  
+                    <div class="col-md-6">
+                        <label for="sectorShortName" class="form-label">Pincode<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <input type="text" class="form-control border-start-0" id="sectorShortName"
+                                placeholder="Enter Pincode" formControlName="Pincode" required
+                                autocomplete="off">
+                        </div>
+                        <!-- <p *ngIf="formValue.  get('sectorShortName').hasError('required') && formValue.get('sectorShortName').touched"
+                            class="text-danger">Sector short name is required*</p>
+                        <p *ngIf="formValue.get('sectorShortName').hasError('minlength') && formValue.get('sectorShortName').touched"
+                            class="text-danger">Sector short name should contain atleast 2 characters*</p>
+                        <p *ngIf="formValue.get('sectorShortName').hasError('maxlength') && formValue.get('sectorShortName').touched"
+                            class="text-danger">Sector short name should not contain more than 5 characters*</p> -->
+                    </div>
+                  
+                    <div class="col-md-6">
+                        <label for="sectorShortName" class="form-label">Employee Height (in ft)<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <input type="text" class="form-control border-start-0" id="sectorShortName"
+                                placeholder="Enter Employee Height (in ft)" formControlName="sectorShortName" required
+                                autocomplete="off">
+                        </div>
+                        <!-- <p *ngIf="formValue.  get('sectorShortName').hasError('required') && formValue.get('sectorShortName').touched"
+                            class="text-danger">Sector short name is required*</p>
+                        <p *ngIf="formValue.get('sectorShortName').hasError('minlength') && formValue.get('sectorShortName').touched"
+                            class="text-danger">Sector short name should contain atleast 2 characters*</p>
+                        <p *ngIf="formValue.get('sectorShortName').hasError('maxlength') && formValue.get('sectorShortName').touched"
+                            class="text-danger">Sector short name should not contain more than 5 characters*</p> -->
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="sectorShortName" class="form-label">Employee Weight (in Kg)<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <input type="text" class="form-control border-start-0" id="sectorShortName"
+                                placeholder="Enter Employee Weight (in Kg)" formControlName="sectorShortName" required
+                                autocomplete="off">
+                        </div>
+                        <!-- <p *ngIf="formValue.  get('sectorShortName').hasError('required') && formValue.get('sectorShortName').touched"
+                            class="text-danger">Sector short name is required*</p>
+                        <p *ngIf="formValue.get('sectorShortName').hasError('minlength') && formValue.get('sectorShortName').touched"
+                            class="text-danger">Sector short name should contain atleast 2 characters*</p>
+                        <p *ngIf="formValue.get('sectorShortName').hasError('maxlength') && formValue.get('sectorShortName').touched"
+                            class="text-danger">Sector short name should not contain more than 5 characters*</p> -->
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Religion<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <select #dropdown class="single-select form-control" formControlName="selectWard">
+                                
+                                <option selected="selected" value="1">Hindu</option>
+                                <option selected="selected" value="2">Muslim</option>
+                                <option selected="selected" value="3">Sikh</option>
+                                <option selected="selected" value="4">Christian</option>
+                            </select>
+                        </div>
+                    </div>
+                  
+                    <div class="col-md-6">
+                        <label class="form-label">Employee Blood Group<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <select #dropdown class="single-select form-control" formControlName="selectWard">
+                                
+                                <option selected="selected" value="1">AB+</option>
+                                <option selected="selected" value="2">A+</option>
+                                <option selected="selected" value="3">B+</option>
+                                <option selected="selected" value="4">O+</option>
+                                <option selected="selected" value="5">B-</option>
+                                <option selected="selected" value="6">A-</option>
+                                <option selected="selected" value="7">O-</option>
+                            </select>
+                        </div>
+                    </div>
+                  
+
+                    <div class="col-md-6">
+                        <label for="sectorShortName" class="form-label">Contact Number<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <input type="text" class="form-control border-start-0" id="sectorShortName"
+                                placeholder="Enter Contact Number" formControlName="sectorShortName" required
+                                autocomplete="off">
+                        </div>
+                    
+                    </div>
+                    <div class="col-md-6">
+                        <label for="sectorShortName" class="form-label">Mobile Number<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <input type="text" class="form-control border-start-0" id="sectorShortName"
+                                placeholder="Enter Mobile Number" formControlName="sectorShortName" required
+                                autocomplete="off">
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <label for="emailAddress" class="form-label">Email Address<span class="text-danger" >*</span></label>
+                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
+                                    class="fadeIn animated bx bx-current-location"></i></span>
+                            <input type="text" class="form-control border-start-0" id="emailAddress"
+                                placeholder="Enter Email Address" formControlName="emailAddress" required
+                                autocomplete="off">
+                        </div>
+                    
+                    </div>
+                
+
+                  
+
+                  
+                    <br /><br /><br /><br />
+
+
+                 
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
