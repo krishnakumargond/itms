@@ -46,12 +46,7 @@
                             <input type="text" class="form-control border-start-0" id="sectorName"
                                 placeholder="Enter Employee Code" formControlName="sectorName" autocomplete="off">
                         </div>
-                        <!-- <p *ngIf="formValue.get('sectorName').hasError('required') && formValue.get('sectorName').touched"
-                            class="text-danger">Sector name is required*</p>
-                        <p *ngIf="formValue.get('sectorName').hasError('minlength') && formValue.get('sectorName').touched"
-                            class="text-danger">Sector name should contain atleast 5 characters*</p>
-                        <p *ngIf="formValue.get('sectorName').hasError('maxlength') && formValue.get('sectorName').touched"
-                            class="text-danger">Sector name should not contain more than 15 characters*</p> -->
+                  
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Salutation<span class="text-danger" >*</span></label>
@@ -75,12 +70,7 @@
                                 placeholder="Enter First Name" formControlName="sectorShortName" required
                                 autocomplete="off">
                         </div>
-                        <!-- <p *ngIf="formValue.  get('sectorShortName').hasError('required') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name is required*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('minlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should contain atleast 2 characters*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('maxlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should not contain more than 5 characters*</p> -->
+                       
                     </div>
                     <div class="col-md-6">
                         <label for="sectorShortName" class="form-label">Middle Name:<span class="text-danger" >*</span></label>
@@ -226,15 +216,19 @@
                         </div>
                     </div>
 
+                  
+
                     <div class="col-md-6">
-                        <label for="remark" class="form-label">Date of Joining</label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-message-add"></i></span>
-                            <input type="date" class="form-control border-start-0" placeholder="dd-mm-yyyy" value=""
-                            min="1997-01-01" max="2030-12-31" id="FromDate"
-                                 formControlName="FromDate" required
-                                autocomplete="off">
+                        <label for="DateOfCommission" class="form-label">Date of Joining</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-calendar-week "></i>
+                            </span>                                        
+                            <input type="text"  class=" result form-control" id="DateOfCommission" name="DateOfCommission" aria-describedby="inputGroupPrepend" #DateOfCommission  required>
+                            <div class="invalid-feedback">Please Select Date of Joining</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
-                    </div> 
+                    </div>
                     
                     <div class="col-md-6">
                         <label for="Martial Status" class="form-label">Martial Status</label>
@@ -248,28 +242,30 @@
                        <td> &nbsp;<input id="Martial_Status" type="radio" name="Martial_Status" value="Female">&nbsp;<label for="Martial_Status">Female</label></td>
                     </div> 
 
-
-
-                    
-
                     <div class="col-md-6">
-                        <label for="isActiveCheckBox" class="form-label mt-3">Status<span class="text-danger" >*</span></label>
-                        <div class="input-group">
-                            <input class="form-check-input" type="checkbox" id="isActiveCheckBox"
-                                formControlName="status">
-                            &nbsp;&nbsp;<label class="form-check-label" for="isActiveCheckBox">is Active</label>
+                        <label for="status" class="form-label">Status</label>
+                        <div class="input-group ">
+                            <input type="checkbox" id="status" aria-describedby="inputGroupPrepend">
+                            <label class="form-check-label" for="invalidCheck">&nbsp;&nbsp;isActive</label>
                         </div>
                     </div>
 
+                    
+
+                  
                     <div class="col-md-6">
-                        <label for="remark" class="form-label">Resigned Date</label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-message-add"></i></span>
-                            <input type="date" class="form-control border-start-0" placeholder="dd-mm-yyyy" value=""
-                                    min="1997-01-01" max="2030-12-31" id="FromDate"
-                                         formControlName="FromDate" required
-                                        autocomplete="off">
+                        <label for="DateOfCommission" class="form-label">Resigned Date</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-calendar-week "></i>
+                            </span>                                        
+                            <input type="text"  class=" result form-control" id="DateOfCommission" name="DateOfCommission" aria-describedby="inputGroupPrepend" #DateOfCommission  required>
+                            <div class="invalid-feedback">Please Select Resigned Date</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
-                    </div> 
+                    </div>
+                    
+                   
                     
 
                 </form>
