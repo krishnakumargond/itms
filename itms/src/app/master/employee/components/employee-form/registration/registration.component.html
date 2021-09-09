@@ -16,159 +16,105 @@
         <hr>
         <div class="card border-top border-0 border-4 border-danger">
             <div class="card-body p-5">
-                <div class="card-title d-flex align-items-center">
-                    <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
-                    </div>
-                    <div class="col-sm-6">
-                        <h5 class="mb-0 text-danger">Add Employee </h5>
-                    </div>                   
-                    <!-- <div class="  align-items-right">
-                        <button type="button" class="btn btn-primary" [disabled]="!formValue.valid">Submit</button>
-                        <button type="button" class="btn btn-danger">Cancel</button>
-                    </div> -->
-                    <div class="ms-auto">
-                        <div class="col-12">
-                       
+             
+                <form class="row g-3 needs-validation" novalidate id="registrationform" >
+                    <div class="card-title d-flex align-items-center">
+                        <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5 class="mb-0 text-danger">Add Employee </h5>
+                        </div>                   
                       
-                    <button type="button" class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>
-                    &nbsp;
-                    <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
-                </div>
-                </div>
-                </div>
-
-                <hr>
-                <form class="row g-3" >
+                        <div class="ms-auto">
+                            <div class="col-12">
+                           
+                          
+                        <button type="submit" class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>
+                        &nbsp;
+                        <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
+                    </div>
+                    </div>
+                    </div>
+    
+                    <hr>
                     <div class="col-md-6">
-                        <label for="sectorName" class="form-label">Employee Code[*]:<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorName"
-                                placeholder="Enter Employee Code" formControlName="sectorName" autocomplete="off">
+                        <label for="EmpCode" class="form-label">Employee Code[*]:<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{1,180}"  class="form-control" id="EmpCode" name="EmpCode" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Employee Code should be a minimum of 1 characters and maximum of 25 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
+                    </div>
                   
-                    </div>
                     <div class="col-md-6">
-                        <label class="form-label">Salutation<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">Mr.</option>
-                                <option selected="selected" value="1">Mrs.</option>
-                            </select>
+                        <label for="salutation" class="form-label">Salutation<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #salutation id="salutation" name="salutation" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select Salutation</option>  
+                                <option value="1">Mr.</option>
+                                <option value="2">Mrs.</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select Salutation!</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
                         </div>
                     </div>
+                   
                   
                     <br /><br /><br /><br />
 
-                    <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">First Name[*]:<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter First Name" formControlName="sectorShortName" required
-                                autocomplete="off">
-                        </div>
-                       
-                    </div>
-                    <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Middle Name:<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter Middle Name" formControlName="sectorShortName" required
-                                autocomplete="off">
-                        </div>
-                       
-                    </div>
-                    <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Last Name:<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter Last Name" formControlName="sectorShortName" required
-                                autocomplete="off">
-                        </div>
                     
-                    </div>
                     <div class="col-md-6">
-                        <label class="form-label">Department<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                               
-                                <option value="1">HR</option>
-		                        <option value="2">ADMIN</option>
-		                        <option value="3">ACCOUNT</option>
-		                         <option value="4">STORES AND PURCHASES</option>
-		                        <option value="5">OPERATION</option>
-		                        <option value="6">TECHNICAL AND WORKSHOP</option>
-		                       <option value="7">SECURITIES</option>
-		                      <option value="9">DRIVERS</option>
-                            </select>
+                        <label for="Firstname" class="form-label">First Name[*]:<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{1,180}"  class="form-control" id="Firstname" name="Firstname" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">First Name should be a minimum of 1 characters and maximum of 180 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
                     </div>
 
                     <div class="col-md-6">
-                        <label class="form-label">Designation<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                               
-                                <option value="1">HR</option>
-		                        <option value="2">ADMIN</option>
-		                        <option value="3">ACCOUNT</option>
-		                         <option value="4">STORES AND PURCHASES</option>
-		                        <option value="5">OPERATION</option>
-		                        <option value="6">TECHNICAL AND WORKSHOP</option>
-		                       <option value="7">SECURITIES</option>
-		                      <option value="9">DRIVERS</option>
-                            </select>
+                        <label for="Middlename" class="form-label">Middle Name:<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{1,180}"  class="form-control" id="Middlename" name="Middlename" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Middle Name should be a minimum of 1 characters and maximum of 180 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <label class="form-label">Employee Type<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                               
-                                <option value="1">Permanent</option>
-                                <option value="2">Temporary</option>
-                            </select>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Father Name[*]<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter Father Name" formControlName="sectorShortName" required
-                                autocomplete="off">
-                        </div>
-                    
                     </div>
                    
+                    
                     <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Date Of Birth[*]<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                                    <input type="date" class="form-control border-start-0" placeholder="dd-mm-yyyy" value=""
-                                    min="1997-01-01" max="2030-12-31" id="FromDate"
-                                         formControlName="FromDate" required
-                                        autocomplete="off">
+                        <label for="Lastname" class="form-label">Last Name:<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{1,180}"  class="form-control" id="Lastname" name="Lastname" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Last Name should be a minimum of 1 characters and maximum of 180 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
                     </div>
-
+                       
                     <div class="col-md-6">
-                        <label class="form-label">Country of Birth<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                               
+                        <label for="Department" class="form-label">Department<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #Department id="Department" name="Department" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select Department</option>  
                                 <option value="1">HR</option>
 		                        <option value="2">ADMIN</option>
 		                        <option value="3">ACCOUNT</option>
@@ -177,70 +123,161 @@
 		                        <option value="6">TECHNICAL AND WORKSHOP</option>
 		                       <option value="7">SECURITIES</option>
 		                      <option value="9">DRIVERS</option>
-                            </select>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select Department!</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <label class="form-label">City of Birth<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                               
-                                <option value="1">HR</option>
-		                        <option value="2">ADMIN</option>
-		                        <option value="3">ACCOUNT</option>
-		                         <option value="4">STORES AND PURCHASES</option>
-		                        <option value="5">OPERATION</option>
-		                        <option value="6">TECHNICAL AND WORKSHOP</option>
-		                       <option value="7">SECURITIES</option>
-		                      <option value="9">DRIVERS</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <label class="form-label">State of Birth<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                               
-                                <option value="1">HR</option>
-		                        <option value="2">ADMIN</option>
-		                        <option value="3">ACCOUNT</option>
-		                         <option value="4">STORES AND PURCHASES</option>
-		                        <option value="5">OPERATION</option>
-		                        <option value="6">TECHNICAL AND WORKSHOP</option>
-		                       <option value="7">SECURITIES</option>
-		                      <option value="9">DRIVERS</option>
-                            </select>
-                        </div>
-                    </div>
-
                   
+                    <div class="col-md-6">
+                        <label for="Designation" class="form-label">Designation<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #Designation id="Designation" name="Designation" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select Designation</option>  
+                                <option value="1">HR</option>
+		                        <option value="2">ADMIN</option>
+		                        <option value="3">ACCOUNT</option>
+		                         <option value="4">STORES AND PURCHASES</option>
+		                        <option value="5">OPERATION</option>
+		                        <option value="6">TECHNICAL AND WORKSHOP</option>
+		                       <option value="7">SECURITIES</option>
+		                      <option value="9">DRIVERS</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select Designation!</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="empType" class="form-label">Employee Type<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #empType id="empType" name="empType" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select Employee Type</option> 
+                                <option value="1">Permanent</option>
+                                <option value="2">Temporary</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select Employee Type!</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
+                        </div>
+                    </div>
+                   
+                   
+                    <div class="col-md-6">
+                        <label for="Fathername" class="form-label">Father Name[*]<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{1,180}"  class="form-control" id="Fathername" name="Fathername" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Fathername Name should be a minimum of 1 characters and maximum of 180 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div>
 
                     <div class="col-md-6">
-                        <label for="DateOfCommission" class="form-label">Date of Joining</label>
+                        <label for="DateOfBirth" class="form-label">Date Of Birth[*]</label>
                         <div class="input-group has-validation">
                             <span class="input-group-text bg-transparent">
                                 <i class="fadeIn animated bx bx-calendar-week "></i>
                             </span>                                        
-                            <input type="text"  class=" result form-control" id="DateOfCommission" name="DateOfCommission" aria-describedby="inputGroupPrepend" #DateOfCommission  required>
+                            <input type="text"  class=" result form-control" id="DateOfBirth" name="DateOfBirth" aria-describedby="inputGroupPrepend" #DateOfBirth  required>
+                            <div class="invalid-feedback">Please Select Date Of Birth</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-md-6">
+                        <label for="CountryOfBirth" class="form-label">Country of Birth<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #CountryOfBirth id="CountryOfBirth" name="CountryOfBirth" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select Country of Birth</option> 
+                                <option value="1">INDIA</option>
+                                <option value="2">US</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select Country of Birth!</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="CityOfBirth" class="form-label">City of Birth<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #CityOfBirth id="CityOfBirth" name="CityOfBirth" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select City of Birth</option> 
+                                <option value="1">DELHI</option>
+                                <option value="2">MUMBAI</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select City of Birth!</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="StateOfBirth" class="form-label">State of Birth<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #StateOfBirth id="StateOfBirth" name="StateOfBirth" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select State of Birth</option> 
+                                <option value="1">UP</option>
+                                <option value="2">MP</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select State of Birth!</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
+                        </div>
+                    </div>
+
+               
+             
+                 
+
+                  
+
+                    <div class="col-md-6">
+                        <label for="DateOfJoining" class="form-label">Date of Joining</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-calendar-week "></i>
+                            </span>                                        
+                            <input type="text"  class=" result form-control" id="DateOfJoining" name="DateOfJoining" aria-describedby="inputGroupPrepend" #DateOfJoining  required>
                             <div class="invalid-feedback">Please Select Date of Joining</div>
                             <div class="valid-feedback">Looks good!</div>
                         </div>
                     </div>
-                    
                     <div class="col-md-6">
-                        <label for="Martial Status" class="form-label">Martial Status</label>
-                        <td><input id="Martial_Status" type="radio" name="Martial_Status" value="UnMarried" checked="checked"> &nbsp;<label for="Martial_Status">UnMarried</label></td><td>
-                            &nbsp; <input id="Martial_Status" type="radio" name="Martial_Status" value="Married">&nbsp;<label for="Martial_Status">Married</label></td>
-                    </div> 
+                        <label for="MartialStatus" class="form-label">Martial Status</label>
+                        <div class="input-group has-validation">
+                            <td><input id="Martial_Status" type="radio" name="Martial_Status" value="UnMarried" checked="checked"> &nbsp;<label for="Martial_Status">UnMarried</label></td>
+                                &nbsp;<td> <input id="Martial_Status" type="radio" name="Martial_Status" value="Married">&nbsp;<label for="Martial_Status">Married</label></td> 
+                        </div>
+                    </div>
+                  
 
                     <div class="col-md-6">
-                        <label for="Martial Status" class="form-label">Gender</label>
-                        <td><input id="Martial_Status" type="radio" name="Martial_Status" value="Male" checked="checked"> &nbsp;<label for="Martial_Status">Male</label></td> 
-                       <td> &nbsp;<input id="Martial_Status" type="radio" name="Martial_Status" value="Female">&nbsp;<label for="Martial_Status">Female</label></td>
-                    </div> 
+                        <label for="Gender" class="form-label">Gender</label>
+                        <div class="input-group has-validation">
+                           
+                                <td><input id="Gender" type="radio" name="Gender" value="Male" checked="checked"> &nbsp;<label for="Gender">Male</label></td> 
+                                &nbsp;<td> <input id="Gender" type="radio" name="Gender" value="Female">&nbsp;<label for="Gender">Female</label></td>
+                            </div>
+                    </div>
+                  
 
                     <div class="col-md-6">
                         <label for="status" class="form-label">Status</label>
@@ -249,17 +286,16 @@
                             <label class="form-check-label" for="invalidCheck">&nbsp;&nbsp;isActive</label>
                         </div>
                     </div>
-
                     
 
                   
                     <div class="col-md-6">
-                        <label for="DateOfCommission" class="form-label">Resigned Date</label>
+                        <label for="ResignedDate" class="form-label">Resigned Date</label>
                         <div class="input-group has-validation">
                             <span class="input-group-text bg-transparent">
                                 <i class="fadeIn animated bx bx-calendar-week "></i>
                             </span>                                        
-                            <input type="text"  class=" result form-control" id="DateOfCommission" name="DateOfCommission" aria-describedby="inputGroupPrepend" #DateOfCommission  required>
+                            <input type="text"  class=" result form-control" id="ResignedDate" name="ResignedDate" aria-describedby="inputGroupPrepend" #ResignedDate  required>
                             <div class="invalid-feedback">Please Select Resigned Date</div>
                             <div class="valid-feedback">Looks good!</div>
                         </div>
