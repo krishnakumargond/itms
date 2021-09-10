@@ -16,100 +16,94 @@
         <hr>
         <div class="card border-top border-0 border-4 border-danger">
             <div class="card-body p-5">
-                <div class="card-title d-flex align-items-center">
-                    <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
-                    </div>
-                    <div class="col-sm-6">
-                        <h5 class="mb-0 text-danger">EXPERIENCE DETAILS </h5>
-                    </div>                   
-                    <!-- <div class="  align-items-right">
-                        <button type="button" class="btn btn-primary" [disabled]="!formValue.valid">Submit</button>
-                        <button type="button" class="btn btn-danger">Cancel</button>
-                    </div> -->
-                    <div class="ms-auto">
-                        <div class="col-12">
-                       
-                      
-                    <button type="button" class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>
-                    &nbsp;
-                    <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
-                </div>
-                </div>
-                </div>
+               
+                <form class="row g-3 needs-validation" novalidate id="registrationform">
 
-                <hr>
-                <form class="row g-3" >
-
-                    <div class="col-md-6">
-                        <label for="FromDate" class="form-label">From Date<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="date" class="form-control border-start-0" placeholder="dd-mm-yyyy" value=""
-                            min="1997-01-01" max="2030-12-31" id="FromDate"
-                                 formControlName="FromDate" required
-                                autocomplete="off">
-
-
+                    <div class="card-title d-flex align-items-center">
+                        <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
                         </div>
-                       
+                        <div class="col-sm-6">
+                            <h5 class="mb-0 text-danger">EXPERIENCE DETAILS </h5>
+                        </div>                   
+                        
+                        <div class="ms-auto">
+                            <div class="col-12">
+                           
+                          
+                        <button type="submit" class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>
+                        &nbsp;
+                        <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
                     </div>
-                    <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">To Date<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                                    <input type="date" class="form-control border-start-0" placeholder="dd-mm-yyyy" value=""
-                                    min="1997-01-01" max="2030-12-31" id="FromDate"
-                                         formControlName="FromDate" required
-                                        autocomplete="off">
-                        </div>
-                      
                     </div>
-                    <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Last Company Emp Code<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter  Last Company Emp Code" formControlName="sectorShortName" required
-                                autocomplete="off">
-                        </div>
-                        <!-- <p *ngIf="formValue.  get('sectorShortName').hasError('required') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name is required*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('minlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should contain atleast 2 characters*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('maxlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should not contain more than 5 characters*</p> -->
                     </div>
-                    <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Last Company Name<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter  Last Company Name" formControlName="sectorShortName" required
-                                autocomplete="off">
-                        </div>
-                        <!-- <p *ngIf="formValue.  get('sectorShortName').hasError('required') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name is required*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('minlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should contain atleast 2 characters*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('maxlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should not contain more than 5 characters*</p> -->
-                    </div>
+    
+                    <hr>
                    
                     <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Company Contact Number<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter  Company Contact Number" formControlName="sectorShortName" required
-                                autocomplete="off">
+                        <label for="FromDate" class="form-label">From Date</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-calendar-week "></i>
+                            </span>                                        
+                            <input type="text"  class=" result form-control" id="FromDate" name="FromDate" aria-describedby="inputGroupPrepend" #FromDate  required>
+                            <div class="invalid-feedback">Please Select From Date</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
-                        <!-- <p *ngIf="formValue.  get('sectorShortName').hasError('required') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name is required*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('minlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should contain atleast 2 characters*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('maxlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should not contain more than 5 characters*</p> -->
                     </div>
+
+                    <div class="col-md-6">
+                        <label for="ToDate" class="form-label">To Date</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-calendar-week "></i>
+                            </span>                                        
+                            <input type="text"  class=" result form-control" id="ToDate" name="ToDate" aria-describedby="inputGroupPrepend" #ToDate  required>
+                            <div class="invalid-feedback">Please Select To Date</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div>
+                 
+
+              
+                    <div class="col-md-6">
+                        <label for="lastCEmpCode" class="form-label">Last Company Emp Code<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{1,25}"  class="form-control" id="lastCEmpCode" name="lastCEmpCode" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Last Company Emp Code should be a minimum of 1 characters and maximum of 25 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div>
+
+                 
+                            
+                    <div class="col-md-6">
+                        <label for="lastCompanyName" class="form-label">Last Company Name <span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{1,180}"  class="form-control" id="lastCompanyName" name="lastCompanyName" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Last Company Name  should be a minimum of 1 characters and maximum of 180 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div>
+                   
+
+                    <div class="col-md-6">
+                        <label for="CompanyContact" class="form-label">Company Contact Number <span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{10}"  class="form-control" id="CompanyContact" name="CompanyContact" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Company Contact Number  should be  10 digit</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div>
+                  
                 
 
                  

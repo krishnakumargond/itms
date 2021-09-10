@@ -16,107 +16,149 @@
         <hr>
         <div class="card border-top border-0 border-4 border-danger">
             <div class="card-body p-5">
-                <div class="card-title d-flex align-items-center">
-                    <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
-                    </div>
-                    <div class="col-sm-6">
-                        <h5 class="mb-0 text-danger">PROOF DETAILS </h5>
-                    </div>                   
-                    <!-- <div class="  align-items-right">
-                        <button type="button" class="btn btn-primary" [disabled]="!formValue.valid">Submit</button>
-                        <button type="button" class="btn btn-danger">Cancel</button>
-                    </div> -->
-                    <div class="ms-auto">
-                        <div class="col-12">
+             
+                <form class="row g-3 needs-validation" novalidate id="proof-detailform" >
+                    <div class="card-title d-flex align-items-center">
+                        <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5 class="mb-0 text-danger">PROOF DETAILS </h5>
+                        </div>                   
                        
-                      
-                    <button type="button" class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>
-                    &nbsp;
-                    <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
-                </div>
-                </div>
-                </div>
-
-                <hr>
-                <form class="row g-3" >
+                        <div class="ms-auto">
+                            <div class="col-12">
+                           
+                          
+                        <button type="submit" class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>
+                        &nbsp;
+                        <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
+                    </div>
+                    </div>
+                    </div>
+    
+                    <hr>
+                 
+                    <div class="col-md-6">
+                        <label for="CountryOfIssue" class="form-label">Country Of Issue<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #CountryOfIssue id="CountryOfIssue" name="CountryOfIssue" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select Country Of Issue</option>  
+                                <option value="1">INDIA</option>
+                                <option value="2">USA</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select Country Of Issue!</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
+                        </div>
+                    </div>
+                  
+                 
                    
                     <div class="col-md-6">
-                        <label class="form-label">Country Of Issue<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">India</option>
-                                <option selected="selected" value="1">USA</option>
-                            </select>
+                        <label for="StateOfIssue" class="form-label">State Of Issue<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #StateOfIssue id="StateOfIssue" name="StateOfIssue" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select State Of Issue</option>  
+                                <option value="1">UP</option>
+                                <option value="2">MP</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select State Of Issue!</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
                         </div>
                     </div>
+                   
+                     
+                    <div class="col-md-6">
+                        <label for="cityOFissue" class="form-label">City Of Issue<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #cityOFissue id="cityOFissue" name="cityOFissue" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select City Of Issue</option>  
+                                <option  value="1">Delhi</option>
+                                <option value="2">Mumbai</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select City Of Issue!</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
+                        </div>
+                    </div>
+                   
+                
+                     
+                    <div class="col-md-6">
+                        <label for="proofType" class="form-label">Proof Type<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #proofType id="proofType" name="proofType" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select Proof Type</option>  
+                                <option  value="1">Identity</option>
+                                <option value="2">Residence</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select Proof Type!</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
+                        </div>
+                    </div>
+                   
                   
-                    <div class="col-md-6">
-                        <label class="form-label">State Of Issue<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">UP</option>
-                                <option selected="selected" value="1">MP</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label">City Of Issue<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">Delhi</option>
-                                <option selected="selected" value="1">Mumbai</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label">Proof Type<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">Identity</option>
-                                <option selected="selected" value="1">Residence</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label">Proof Parameter<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">India</option>
-                                <option selected="selected" value="1">USA</option>
-                            </select>
-                        </div>
-                    </div>
                   
+                     
+                    <div class="col-md-6">
+                        <label for="Proof_parameter" class="form-label">Proof Parameter<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #Proof_parameter id="Proof_parameter" name="Proof_parameter" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select Proof Parameter</option>  
+                                <option value="1"></option>
+                                <option value="2"></option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select Proof Parameter!</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
+                        </div>
+                    </div>
+                   
                     <br /><br /><br /><br />
 
+                  
                     <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Proof Authority<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter Proof Authority" formControlName="sectorShortName" required
-                                autocomplete="off">
+                        <label for="ProofAuthority" class="form-label">Proof Authority<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{1,180}"  class="form-control" id="ProofAuthority" name="ProofAuthority" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Proof Authority should be a minimum of 1 characters and maximum of 180 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
-                        <!-- <p *ngIf="formValue.  get('sectorShortName').hasError('required') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name is required*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('minlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should contain atleast 2 characters*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('maxlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should not contain more than 5 characters*</p> -->
-                    </div>
+                    </div> 
+                   
                   
                    
-                    
+                    <div class="col-md-6">
+                        <label for="Proof_Number" class="form-label">Proof Number<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{1,180}"  class="form-control" id="Proof_Number" name="Proof_Number" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Proof Number should be a minimum of 1 characters and maximum of 180 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div> 
                    
                   
 
@@ -125,56 +167,55 @@
                   
 
 
-                    <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Proof Number<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter Proof Number" formControlName="sectorShortName" required
-                                autocomplete="off">
-                        </div>
-                    
-                    </div>
                    
+                   
+                    
                     <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Date of Issue<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                                    <input type="date" class="form-control border-start-0" placeholder="dd-mm-yyyy" value=""
-                                    min="1997-01-01" max="2030-12-31" id="FromDate"
-                                         formControlName="FromDate" required
-                                        autocomplete="off">
+                        <label for="DateOfIssue" class="form-label">Date of Issue</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-calendar-week "></i>
+                            </span>                                        
+                            <input type="text"  class=" result form-control" id="DateOfIssue" name="DateOfIssue" aria-describedby="inputGroupPrepend" #DateOfIssue  required>
+                            <div class="invalid-feedback">Please Select Date of Issue</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
                     </div>
 
 
+                   
+
                     <div class="col-md-6">
-                        <label for="remark" class="form-label">Date of Expiry</label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-message-add"></i></span>
-                            <input type="date" class="form-control border-start-0" placeholder="dd-mm-yyyy" value=""
-                            min="1997-01-01" max="2030-12-31" id="FromDate"
-                                 formControlName="FromDate" required
-                                autocomplete="off">
+                        <label for="DateOfExpiry" class="form-label">Date of Expiry</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-calendar-week "></i>
+                            </span>                                        
+                            <input type="text"  class=" result form-control" id="DateOfExpiry" name="DateOfExpiry" aria-describedby="inputGroupPrepend" #DateOfExpiry  required>
+                            <div class="invalid-feedback">Please Select Date of Expiry</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
-                    </div> 
+                    </div>
                     
               
                    
 
 
-
+                    <div class="col-md-6 p-3">
+                        <!-- <label for="myfile">Select a file:</label> -->
+                        <div class="col-md-6"><input type="file" id="myfile" name="myfile"><br><br></div>
+                        <div class="col-md-6"><button type="submit" class="btn btn-primary p-2 border-radius: 24px;">Upload and Add</button></div>
+                    </div>
                     
 
                  
 
                 </form>
-                <form action="/action_page.php" class="p-5 row g-2">
-                    <!-- <label for="myfile">Select a file:</label> -->
-                    <div class="col-md-6"><input type="file" id="myfile" name="myfile"><br><br></div>
-                    <div class="col-md-6"><button type="button" class="btn btn-primary p-2 border-radius: 24px;">Upload and Add</button></div>
+              
                     
                     
-                  </form>
+                    
+                  
             </div>
         </div>
     </div>

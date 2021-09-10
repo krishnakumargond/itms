@@ -16,125 +16,142 @@
         <hr>
         <div class="card border-top border-0 border-4 border-danger">
             <div class="card-body p-5">
-                <div class="card-title d-flex align-items-center">
-                    <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
+           
+                <form class="row g-3 needs-validation" novalidate id="payrollform" >
+                    <div class="card-title d-flex align-items-center">
+                        <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5 class="mb-0 text-danger">PAYROLL DETAILS </h5>
+                        </div>                   
+      
+                        <div class="ms-auto">
+                            <div class="col-12">
+                           
+                          
+                        <button type="submit" class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>
+                        &nbsp;
+                        <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
                     </div>
-                    <div class="col-sm-6">
-                        <h5 class="mb-0 text-danger">PAYROLL DETAILS </h5>
-                    </div>                   
-                    <!-- <div class="  align-items-right">
-                        <button type="button" class="btn btn-primary" [disabled]="!formValue.valid">Submit</button>
-                        <button type="button" class="btn btn-danger">Cancel</button>
-                    </div> -->
-                    <div class="ms-auto">
-                        <div class="col-12">
-                       
-                      
-                    <button type="button" class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>
-                    &nbsp;
-                    <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
-                </div>
-                </div>
-                </div>
-
-                <hr>
-                <form class="row g-3" >
-                   
+                    </div>
+                    </div>
+    
+                    <hr>
+                  
+                  
                     <div class="col-md-6">
-                        <label class="form-label">Employee Bank Name<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">IOC</option>
-                                <option selected="selected" value="1">ICIC</option>
-                            </select>
+                        <label for="EmpBankName" class="form-label">Employee Bank Name<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #EmpBankName id="EmpBankName" name="EmpBankName" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select Employee Bank Name</option>  
+                                <option value="1">IOC</option>
+                                <option value="2">ICIC</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select Employee Bank Name!</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
                         </div>
                     </div>
-                  
                     <br /><br /><br /><br />
 
-                    <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Account Number<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter Account Number" formControlName="sectorShortName" required
-                                autocomplete="off">
-                        </div>
-                        <!-- <p *ngIf="formValue.  get('sectorShortName').hasError('required') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name is required*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('minlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should contain atleast 2 characters*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('maxlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should not contain more than 5 characters*</p> -->
-                    </div>
-                  
                    
-                    
-                   
+                     
                     <div class="col-md-6">
-                        <label class="form-label">Mode of Payment<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                               
-                                <option value="1">HR</option>
-		                        <option value="2">ADMIN</option>
-		                        <option value="3">ACCOUNT</option>
-		                         <option value="4">STORES AND PURCHASES</option>
-		                        <option value="5">OPERATION</option>
-		                        <option value="6">TECHNICAL AND WORKSHOP</option>
-		                       <option value="7">SECURITIES</option>
-		                      <option value="9">DRIVERS</option>
-                            </select>
+                        <label for="AccountNumber" class="form-label">Account Number<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{9,18}"  class="form-control" id="AccountNumber" name="AccountNumber" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Account Number should be a minimum of 9 characters and maximum of 18 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
                     </div>
 
+                  
+                   
+                    <div class="col-md-6">
+                        <label for="ModeOfPayment" class="form-label">Mode of Payment<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #ModeOfPayment id="ModeOfPayment" name="ModeOfPayment" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select Mode of Payment</option>  
+                                <option value="1">Cheque</option>
+                                <option value="2">Cash</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select Mode of Payment!</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
+                        </div>
+                    </div>
+                   
+                   
+                  
                  
 
                   
 
 
-                    <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">EPF Number<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter EPF Number" formControlName="sectorShortName" required
-                                autocomplete="off">
-                        </div>
-                    
-                    </div>
                    
                     <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">ESIC Number<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter ESIC Number" formControlName="sectorShortName" required
-                                autocomplete="off">
+                        <label for="EpfNumber" class="form-label">EPF Number<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{22}"  class="form-control" id="EpfNumber" name="EpfNumber" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">EPF Number should be  of 22 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
                     </div>
 
+                   
+               
 
                     <div class="col-md-6">
-                        <label for="remark" class="form-label">UAN Number</label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-message-add"></i></span>
-                            <input type="text" class="form-control border-start-0" id="remark" placeholder="Enter UAN Number" formControlName="remark">
+                        <label for="EsicNumber" class="form-label">ESIC Number<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{17}"  class="form-control" id="EsicNumber" name="EsicNumber" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">ESIC Number should be  of 17 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
-                    </div> 
-                    
-                    
+                    </div>
+
+                  
                     <div class="col-md-6">
-                        <label for="remark" class="form-label">Fixed Salary</label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i class="fadeIn animated bx bx-message-add"></i></span>
-                            <input type="text" class="form-control border-start-0" id="remark" placeholder="Enter Fixed Salary" formControlName="remark">
+                        <label for="UanNumber" class="form-label">UAN Number<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{12}"  class="form-control" id="UanNumber" name="UanNumber" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">UAN Number should be  of 12 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
-                    </div> 
+                    </div>
+                    
+                  
                     
                    
-
+                    <div class="col-md-6">
+                        <label for="FixedSalary" class="form-label">Fixed Salary<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{3,25}"  class="form-control" id="FixedSalary" name="FixedSalary" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Fixed Salary should be a minimum of 3 characters and maximum of 25 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div>
 
 
                     
