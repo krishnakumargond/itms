@@ -16,133 +16,168 @@
         <hr>
         <div class="card border-top border-0 border-4 border-danger">
             <div class="card-body p-5">
-                <div class="card-title d-flex align-items-center">
-                    <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
-                    </div>
-                    <div class="col-sm-6">
-                        <h5 class="mb-0 text-danger">FAMILY DETAILS </h5>
-                    </div>                   
-                    <!-- <div class="  align-items-right">
-                        <button type="button" class="btn btn-primary" [disabled]="!formValue.valid">Submit</button>
-                        <button type="button" class="btn btn-danger">Cancel</button>
-                    </div> -->
-                    <div class="ms-auto">
-                        <div class="col-12">
-                       
+              
+                <form class="row g-3 needs-validation" novalidate id="family-detailform" >
+                    <div class="card-title d-flex align-items-center">
+                        <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5 class="mb-0 text-danger">FAMILY DETAILS </h5>
+                        </div>                   
                       
-                    <button type="button" class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>
-                    &nbsp;
-                    <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
-                </div>
-                </div>
-                </div>
-
-                <hr>
-                <form class="row g-3" >
+                        <div class="ms-auto">
+                            <div class="col-12">
+                           
+                          
+                        <button type="submit" class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>
+                        &nbsp;
+                        <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
+                    </div>
+                    </div>
+                    </div>
+    
+                    <hr>
 
                     <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Name:<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter  Name" formControlName="sectorShortName" required
-                                autocomplete="off">
+                        <label for="name" class="form-label"> Name[*]<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{1,180}"  class="form-control" id="name" name="name" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback"> Name should be a minimum of 1 characters and maximum of 180 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
-                        <!-- <p *ngIf="formValue.  get('sectorShortName').hasError('required') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name is required*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('minlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should contain atleast 2 characters*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('maxlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should not contain more than 5 characters*</p> -->
+                    </div>
+             
+                    <div class="col-md-6">
+                        <label for="Relationship" class="form-label">Relationship<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #Relationship id="Relationship" name="Relationship" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select Relationship </option>  
+                                <option  value="1">Father</option>
+                                <option  value="2">Brother</option>
+                                <option  value="3">Mother</option>
+                                <option  value="4">Sister</option>
+                                <option  value="5">Wife</option>
+                                <option  value="6">Son</option>
+                                <option  value="7">Daughter</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select Relationship !</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
+                        </div>
+                    </div>
+                   
+                  
+                  
+                    <div class="col-md-6">
+                        <label for="CountryOfIssue" class="form-label">Country Name<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #CountryOfIssue id="CountryOfIssue" name="CountryOfIssue" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select Country </option>  
+                                <option value="1">INDIA</option>
+                                <option value="2">USA</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select Country !</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
+                        </div>
+                    </div>
+
+  
+                    <div class="col-md-6">
+                        <label for="StateOfIssue" class="form-label">State Name<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #StateOfIssue id="StateOfIssue" name="StateOfIssue" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select State </option>  
+                                <option value="1">UP</option>
+                                <option value="2">MP</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select State !</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
+                        </div>
                     </div>
                    
                     <div class="col-md-6">
-                        <label class="form-label">Relationship<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">Father</option>
-                                <option selected="selected" value="1">Brother</option>
-                                <option selected="selected" value="1">Mother</option>
-                                <option selected="selected" value="1">Sister</option>
-                                <option selected="selected" value="1">Wife</option>
-                                <option selected="selected" value="1">Son</option>
-                                <option selected="selected" value="1">Daughter</option>
-                            </select>
+                        <label for="cityOFissue" class="form-label">City Name <span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #cityOFissue id="cityOFissue" name="cityOFissue" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select City </option>  
+                                <option  value="1">Delhi</option>
+                                <option value="2">Mumbai</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select City !</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
                         </div>
                     </div>
+
+
+
+
+
+
+
                   
                     <div class="col-md-6">
-                        <label class="form-label">Country Name<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">India</option>
-                                
-                            </select>
+                        <label for="DateOfBirth" class="form-label">Date Of Birth[*]</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-calendar-week "></i>
+                            </span>                                        
+                            <input type="text"  class=" result form-control" id="DateOfBirth" name="DateOfBirth" aria-describedby="inputGroupPrepend" #DateOfBirth  required>
+                            <div class="invalid-feedback">Please Select Date Of Birth</div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label">State Name<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">UP</option>
-                                <option selected="selected" value="1">MP</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label">City Name<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">Mumbai</option>
-                                <option selected="selected" value="1">Chennai</option>
-                            </select>
-                        </div>
-                    </div>
-                  
-                    <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Date Of Birth<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                                    <input type="date" class="form-control border-start-0" placeholder="dd-mm-yyyy" value=""
-                                    min="1997-01-01" max="2030-12-31" id="FromDate"
-                                         formControlName="FromDate" required
-                                        autocomplete="off">
-                        </div>
-                    
                     </div>
                   
                     <br /><br /><br /><br />
 
+                   
+                   
                     <div class="col-md-6">
-                        <label class="form-label">Nationality<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">Indian</option>
-                                <option selected="selected" value="1">USA</option>
-                            </select>
+                        <label for="Nationality" class="form-label">Nationality <span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #Nationality id="Nationality" name="Nationality" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select Nationality </option>  
+                                <option  value="1">Indian</option>
+                                <option value="2">American</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select Nationality !</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
                         </div>
                     </div>
-                   
                     
                    
                   
 
                     <div class="col-md-6">
-                        <label for="Martial Status" class="form-label">Gender</label>
-                        <td><input id="Martial_Status" type="radio" name="Martial_Status" value="Male" checked="checked"> &nbsp;<label for="Martial_Status">Male</label></td> 
-                       <td> &nbsp;<input id="Martial_Status" type="radio" name="Martial_Status" value="Female">&nbsp;<label for="Martial_Status">Female</label></td>
-                    </div> 
-
+                        <label for="Gender" class="form-label">Gender</label>
+                        <div class="input-group has-validation">
+                           
+                                <td><input id="Gender" type="radio" name="Gender" value="Male" checked="checked"> &nbsp;<label for="Gender">Male</label></td> 
+                                &nbsp;<td> <input id="Gender" type="radio" name="Gender" value="Female">&nbsp;<label for="Gender">Female</label></td>
+                            </div>
+                    </div>
+                  
                   
 
 

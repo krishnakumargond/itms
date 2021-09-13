@@ -16,288 +16,377 @@
         <hr>
         <div class="card border-top border-0 border-4 border-danger">
             <div class="card-body p-5">
-                <div class="card-title d-flex align-items-center">
-                    <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
-                    </div>
-                    <div class="col-sm-6">
-                        <h5 class="mb-0 text-danger">PERSONAL DETAILS </h5>
-                    </div>                   
-                    <!-- <div class="  align-items-right">
-                        <button type="button" class="btn btn-primary" [disabled]="!formValue.valid">Submit</button>
-                        <button type="button" class="btn btn-danger">Cancel</button>
-                    </div> -->
-                    <div class="ms-auto">
-                        <div class="col-12">
-                       
+               
+                <form class="row g-3 needs-validation" novalidate id="personal-detailform">
+
+                    <div class="card-title d-flex align-items-center">
+                        <div><i class="fadeIn animated bx bx-bowling-ball me-1 font-22 text-danger"></i>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5 class="mb-0 text-danger">PERSONAL DETAILS </h5>
+                        </div>
                       
-                    <button type="button" class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>
-                    &nbsp;
-                    <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
-                </div>
-                </div>
-                </div>
-
-                <hr>
-                <form class="row g-3" >
-                   
-                    
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <label for="sectorShortName" class="form-label">Communication Address<span class="text-danger" >*</span></label>
-                                <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                        placeholder="Line 1" formControlName="sectorShortName" required
-                                        autocomplete="off">
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="sectorShortName" class="form-label"><span class="text-danger" >*</span></label>
-                                <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                        placeholder="Line 2" formControlName="sectorShortName" required
-                                        autocomplete="off">
+                        <div class="ms-auto">
+                            <div class="col-12">
+    
+    
+                                <button type="submit" class="btn btn-primary px-2"><i class="bx bxs-save"></i></button>
+                                &nbsp;
+                                <button type="button" class="btn btn-danger px-2"><i class="bx bx-x"></i></button>
                             </div>
                         </div>
-                     
                     </div>
-
-                  
-                 
-
-                   
-                    <div class="col-md-6">
-                        <label class="form-label">Country<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">IOC</option>
-                                <option selected="selected" value="1">ICIC</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label">State<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">IOC</option>
-                                <option selected="selected" value="1">ICIC</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label">City<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">IOC</option>
-                                <option selected="selected" value="1">ICIC</option>
-                            </select>
-                        </div>
-                    </div>
-                  
-                    <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Pincode<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="Pincode"
-                                placeholder="Enter Pincode" formControlName="Pincode" required
-                                autocomplete="off">
-                        </div>
-                        <!-- <p *ngIf="formValue.  get('sectorShortName').hasError('required') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name is required*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('minlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should contain atleast 2 characters*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('maxlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should not contain more than 5 characters*</p> -->
-                    </div>
-                    <div class="col-12">
-                        <div class="row">
-                            <!-- <label for="isActiveCheckBox" class="form-label mt-3">Status<span class="text-danger" >*</span></label> -->
-                        <div class="input-group">
-                            <input class="form-check-input" type="checkbox" id="isActiveCheckBox"
-                                formControlName="status">
-                            &nbsp;&nbsp;<label class="form-check-label" for="isActiveCheckBox">Same As Communication Address</label>
-                        </div>
-                        </div>
-                    </div>
-                    
-                   
+    
+                    <hr>
 
                     <div class="col-12">
                         <div class="row">
                             <div class="col-sm-6">
-                                <label for="sectorShortName" class="form-label">Permanent Address<span class="text-danger" >*</span></label>
-                                <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                        placeholder="Line 1" formControlName="sectorShortName" required
-                                        autocomplete="off">
+                                <label for="address1" class="form-label">Communication Address<span
+                                        class="text-danger">*</span></label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text bg-transparent">
+                                        <i class="fadeIn animated bx bx-bullseye"></i>
+                                    </span>
+                                    <input type="text" pattern=".{1,255}" class="form-control" id="address1"
+                                        name="address1" aria-describedby="inputGroupPrepend" placeholder="line1"
+                                        required>
+                                    <div class="invalid-feedback">Communication Address line1 should be a minimum of 1
+                                        characters and maximum of 255 characters</div>
+                                    <div class="valid-feedback">Looks good!</div>
+                                </div>
                             </div>
                             <div class="col-sm-6">
-                                <label for="sectorShortName" class="form-label"><span class="text-danger" >*</span></label>
-                                <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                        placeholder="Line 2" formControlName="sectorShortName" required
-                                        autocomplete="off">
+
+                                <label> <span class="text-danger">**</span></label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text bg-transparent">
+                                        <i class="fadeIn animated bx bx-bullseye"></i>
+                                    </span>
+                                    <input type="text" pattern=".{1,255}" class="form-control" id="address2"
+                                        name="address2" aria-describedby="inputGroupPrepend" placeholder="line2"
+                                        required>
+                                    <div class="invalid-feedback">Communication Address line2 should be a minimum of 1
+                                        characters and maximum of 255 characters</div>
+                                    <div class="valid-feedback">Looks good!</div>
+                                </div>
                             </div>
                         </div>
-                     
+
                     </div>
 
-                     
+
+
                     <div class="col-md-6">
-                        <label class="form-label">Country<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">IOC</option>
-                                <option selected="selected" value="1">ICIC</option>
+                        <label for="CountryOfIssue" class="form-label">Country <span
+                                class="text-danger">*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #CountryOfIssue id="CountryOfIssue"
+                                name="CountryOfIssue" aria-describedby="inputGroupPrepend" required>
+                                <option value="" disabled selected>Select Country </option>
+                                <option value="1">INDIA</option>
+                                <option value="2">USA</option>
                             </select>
+                            <div class="invalid-feedback">Please Select Country !</div>
+                            <div class="valid-feedback">Looks good!</div>
+
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label">State<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">IOC</option>
-                                <option selected="selected" value="1">ICIC</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label">City<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">IOC</option>
-                                <option selected="selected" value="1">ICIC</option>
-                            </select>
-                        </div>
-                    </div>
-                  
-                    <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Pincode<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter Pincode" formControlName="Pincode" required
-                                autocomplete="off">
-                        </div>
-                        <!-- <p *ngIf="formValue.  get('sectorShortName').hasError('required') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name is required*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('minlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should contain atleast 2 characters*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('maxlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should not contain more than 5 characters*</p> -->
-                    </div>
-                  
-                    <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Employee Height (in ft)<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter Employee Height (in ft)" formControlName="sectorShortName" required
-                                autocomplete="off">
-                        </div>
-                        <!-- <p *ngIf="formValue.  get('sectorShortName').hasError('required') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name is required*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('minlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should contain atleast 2 characters*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('maxlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should not contain more than 5 characters*</p> -->
                     </div>
 
                     <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Employee Weight (in Kg)<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter Employee Weight (in Kg)" formControlName="sectorShortName" required
-                                autocomplete="off">
+                        <label for="StateOfIssue" class="form-label">State <span class="text-danger">*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #StateOfIssue id="StateOfIssue"
+                                name="StateOfIssue" aria-describedby="inputGroupPrepend" required>
+                                <option value="" disabled selected>Select State </option>
+                                <option value="1">UP</option>
+                                <option value="2">MP</option>
+                            </select>
+                            <div class="invalid-feedback">Please Select State !</div>
+                            <div class="valid-feedback">Looks good!</div>
+
                         </div>
-                        <!-- <p *ngIf="formValue.  get('sectorShortName').hasError('required') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name is required*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('minlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should contain atleast 2 characters*</p>
-                        <p *ngIf="formValue.get('sectorShortName').hasError('maxlength') && formValue.get('sectorShortName').touched"
-                            class="text-danger">Sector short name should not contain more than 5 characters*</p> -->
                     </div>
 
                     <div class="col-md-6">
-                        <label class="form-label">Religion<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">Hindu</option>
-                                <option selected="selected" value="2">Muslim</option>
-                                <option selected="selected" value="3">Sikh</option>
-                                <option selected="selected" value="4">Christian</option>
+                        <label for="cityOFissue" class="form-label">City <span class="text-danger">*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #cityOFissue id="cityOFissue" name="cityOFissue"
+                                aria-describedby="inputGroupPrepend" required>
+                                <option value="" disabled selected>Select City </option>
+                                <option value="1">Delhi</option>
+                                <option value="2">Mumbai</option>
                             </select>
+                            <div class="invalid-feedback">Please Select City !</div>
+                            <div class="valid-feedback">Looks good!</div>
+
                         </div>
                     </div>
-                  
+
                     <div class="col-md-6">
-                        <label class="form-label">Employee Blood Group<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <select #dropdown class="single-select form-control" formControlName="selectWard">
-                                
-                                <option selected="selected" value="1">AB+</option>
-                                <option selected="selected" value="2">A+</option>
-                                <option selected="selected" value="3">B+</option>
-                                <option selected="selected" value="4">O+</option>
-                                <option selected="selected" value="5">B-</option>
-                                <option selected="selected" value="6">A-</option>
-                                <option selected="selected" value="7">O-</option>
-                            </select>
+                        <label for="Pin_Code" class="form-label">Pin Code<span class="text-danger">*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{6}" class="form-control" id="Pin_Code" name="Pin_Code"
+                                aria-describedby="inputGroupPrepend" required>
+                            <div class="invalid-feedback">Pin Code should be  of 6 digit
+                                </div>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
                     </div>
+
+                    <div class="col-12">
+                        <div class="row">
+
+                            <div class="input-group ">
+                                <input type="checkbox" id="status" aria-describedby="inputGroupPrepend">
+                                <label class="form-check-label" for="invalidCheck">&nbsp;&nbsp;Same As Communication
+                                    Address</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="address1" class="form-label">Permanent Address<span
+                                        class="text-danger">*</span></label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text bg-transparent">
+                                        <i class="fadeIn animated bx bx-bullseye"></i>
+                                    </span>
+                                    <input type="text" pattern=".{1,255}" class="form-control" id="address1"
+                                        name="address1" aria-describedby="inputGroupPrepend" placeholder="line1"
+                                        required>
+                                    <div class="invalid-feedback">Permanent Address line1 should be a minimum of 1 characters
+                                        and maximum of 255
+                                        characters</div>
+                                    <div class="valid-feedback">Looks good!</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+
+                                <label> <span class="text-danger">**</span></label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text bg-transparent">
+                                        <i class="fadeIn animated bx bx-bullseye"></i>
+                                    </span>
+                                    <input type="text" pattern=".{1,255}" class="form-control" id="address2"
+                                        name="address2" aria-describedby="inputGroupPrepend" placeholder="line2"
+                                        required>
+                                    <div class="invalid-feedback">Permanent Address line2 should be a minimum of 1 characters
+                                        and maximum of 255
+                                        characters</div>
+                                    <div class="valid-feedback">Looks good!</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="col-md-6">
+                        <label for="Country" class="form-label">Country <span
+                                class="text-danger">*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #Country id="Country"
+                                name="Country" aria-describedby="inputGroupPrepend" required>
+                                <option value="" disabled selected>Select Country </option>
+                                <option value="1">INDIA</option>
+                                <option value="2">USA</option>
+                            </select>
+                            <div class="invalid-feedback">Please Select Country !</div>
+                            <div class="valid-feedback">Looks good!</div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="State" class="form-label">State <span class="text-danger">*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #State id="State"
+                                name="State" aria-describedby="inputGroupPrepend" required>
+                                <option value="" disabled selected>Select State </option>
+                                <option value="1">UP</option>
+                                <option value="2">MP</option>
+                            </select>
+                            <div class="invalid-feedback">Please Select State !</div>
+                            <div class="valid-feedback">Looks good!</div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="city" class="form-label">City <span class="text-danger">*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #city id="city" name="city"
+                                aria-describedby="inputGroupPrepend" required>
+                                <option value="" disabled selected>Select City </option>
+                                <option value="1">Delhi</option>
+                                <option value="2">Mumbai</option>
+                            </select>
+                            <div class="invalid-feedback">Please Select City !</div>
+                            <div class="valid-feedback">Looks good!</div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="Pin_Code" class="form-label">Pin Code<span class="text-danger">*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{6}" class="form-control" id="Pin_Code" name="Pin_Code"
+                                aria-describedby="inputGroupPrepend" required>
+                            <div class="invalid-feedback">Pin Code should be  of 6 digit
+                                </div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="Employee_height" class="form-label">Employee Height (in ft)<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{1,50}"  class="form-control" id="Employee_height" name="Employee_height" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Employee Height (in ft) should be a minimum of 1 characters and maximum of 50 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div> 
+                   
+                    <div class="col-md-6">
+                        <label for="Employee_Weight" class="form-label">Employee Weight (in Kg)<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern=".{1,50}"  class="form-control" id="Employee_Weight" name="Employee_Weight" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Employee Weight (in Kg) should be a minimum of 1 characters and maximum of 50 characters</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div> 
+                   
+
+                    <div class="col-md-6">
+                        <label for="Religion" class="form-label">Religion <span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #Religion id="Religion" name="Religion" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select Religion </option>  
+                                <option  value="1">Hindu</option>
+                                <option value="2">Muslim</option>
+                                <option  value="3">Sikh</option>
+                                <option  value="4">Christian</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select Religion !</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
+                        </div>
+                    </div>
+
                   
 
                     <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Contact Number<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter Contact Number" formControlName="sectorShortName" required
-                                autocomplete="off">
+                        <label for="Employee_bloodgroup" class="form-label">Employee Blood Group <span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-text"></i>
+                            </span>
+                            <select class="form-control single-select" #Employee_bloodgroup id="Employee_bloodgroup" name="Employee_bloodgroup" aria-describedby="inputGroupPrepend"  required>                                
+                                <option value="" disabled selected>Select Employee Blood Group </option>  
+                                <option  value="1">AB+</option>
+                                <option  value="2">A+</option>
+                                <option  value="3">B+</option>
+                                <option  value="4">O+</option>
+                                <option value="5">B-</option>
+                                <option value="6">A-</option>
+                                <option  value="7">O-</option>
+                            </select>                                        
+                            <div class="invalid-feedback">Please Select Employee Blood Group !</div>
+                            <div class="valid-feedback">Looks good!</div>
+                            
                         </div>
-                    
                     </div>
-                    <div class="col-md-6">
-                        <label for="sectorShortName" class="form-label">Mobile Number<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="sectorShortName"
-                                placeholder="Enter Mobile Number" formControlName="sectorShortName" required
-                                autocomplete="off">
-                        </div>
-                    
-                    </div>
-                    
-                    <div class="col-md-6">
-                        <label for="emailAddress" class="form-label">Email Address<span class="text-danger" >*</span></label>
-                        <div class="input-group"> <span class="input-group-text bg-transparent"><i
-                                    class="fadeIn animated bx bx-current-location"></i></span>
-                            <input type="text" class="form-control border-start-0" id="emailAddress"
-                                placeholder="Enter Email Address" formControlName="emailAddress" required
-                                autocomplete="off">
-                        </div>
-                    
-                    </div>
+
                 
 
-                  
+                    <div class="col-md-6">
+                        <label for="contact" class="form-label">Contact Number<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern="[0-9].{9}"  class="form-control" id="contact" name="contact" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback"> Contact Number should be of 10 characters </div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div> 
 
+                    <div class="col-md-6">
+                        <label for="mobile" class="form-label">Mobile Number<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="text" pattern="[0-9].{9}"  class="form-control" id="mobile" name="mobile" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">Mobile Number should be of 10 characters </div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div> 
                   
+                   
+
+                   
+                   
+                    <div class="col-md-6">
+                        <label for="email_address" class="form-label">Email Address<span class="text-danger" >*</span></label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-transparent">
+                                <i class="fadeIn animated bx bx-bullseye"></i>
+                            </span>
+                            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  class="form-control" id="email_address" name="email_address" aria-describedby="inputGroupPrepend"  required>
+                            <div class="invalid-feedback">please include an '@' in the email address. 'email_address is missing an '@'  </div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div> 
+
+
+
+
                     <br /><br /><br /><br />
 
 
-                 
+
 
                 </form>
             </div>
